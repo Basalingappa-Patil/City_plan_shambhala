@@ -91,6 +91,27 @@ body {
         .content.shifted {
             margin-left: 250px; /* Shift the content right */
         }
+    /* Responsive adjustments */
+@media (max-width: 768px) {
+    .toggle-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1.25rem;
+    }
+
+    .sidebar {
+        width: 200px; /* Smaller sidebar for smaller screens */
+    }
+
+    .sidebar.active + .toggle-button {
+        left: 200px; /* Adjust toggle button position */
+    }
+
+    .content.shifted {
+        margin-left: 200px; /* Adjust content margin for smaller sidebar */
+        width: calc(100% - 200px); /* Adjust content width */
+    }
+}
     </style>
 </head>
 <body>
