@@ -1,0 +1,234 @@
+/* General Styles */
+/* General Styles */
+body {
+    font-family: 'Times New Roman', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('background1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #927676;
+}
+
+
+h1, h2, h3 {
+    margin: 0 0 15px;
+    color: #000000;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: #768086;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header title styling */
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f0f0f0; /* Change this to your desired color */
+}
+
+
+/* Subheading styling */
+header p {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+    color: #f0f0f0;
+}
+
+
+/* Navbar Styles */
+nav#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #70e99e;
+    overflow-x: auto;
+}
+
+nav#navbar li {
+    margin: 0 10px;
+}
+
+nav#navbar a {
+    text-decoration: none;
+    color: rgb(73, 64, 64);
+    padding: 14px 20px;
+    display: block;
+    font-weight: bold;
+}
+
+nav#navbar a:hover {
+    background-color: #6dffe2;
+    border-radius: 4px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.background-image {
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below the image */
+}
+
+/* Style for the Problem Definition & Team Section */
+#problem-definition h2 a {
+    color: #004d80; /* Color for the Problem Definition link */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+#problem-definition h2 a:hover {
+    color: #ffcc00; /* Hover effect color */
+}
+
+ul li a {
+    color: #007bff; /* Color for team member links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #0056b3; /* Hover effect for member links */
+}
+
+/* Box Style for Sections */
+section {
+    background-color: rgb(240, 230, 230);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+section h2 {
+    border-bottom: 3px solid #004d80;
+    padding-bottom: 10px;
+    font-size: 1.8em;
+}
+
+/* Table Styles */
+section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+section table th, section table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+section table th {
+    background-color: #004d80;
+    color: white;
+}
+
+section table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Map Container - Side by Side Images */
+.map-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Ensure images maintain their natural size */
+.map-container img {
+    max-width: 48%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-container img.large-map {
+    flex: 1 1 100%; /* Full-width for larger maps */
+}
+
+/* Footer Styles */
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer Button Styling */
+.next-page-btn {
+    background-color: #004d80; /* Blue background */
+    color: white; /* White text */
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Removes underline from link */
+    transition: background-color 0.3s ease;
+}
+
+.next-page-btn:hover {
+    background-color: #005e99; /* Darker blue on hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav#navbar ul {
+        flex-direction: column;
+    }
+
+    nav#navbar li {
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    .map-container img {
+        width: 100%;
+    }
+}

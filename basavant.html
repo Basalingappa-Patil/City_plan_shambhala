@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hierarchical Data and Tree Structures</title>
+  <link rel="stylesheet" href="basavantstyl.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hierarchical Data and Tree Structures</h1>
+    <section>
+      <h2>4. Hierarchical Data</h2>
+      <p>
+        Hierarchical data refers to information structured in a tree-like format, where nodes represent elements, and edges denote relationships. Various tree data structures are optimized for specific scenarios, offering trade-offs in operations like searching, insertion, deletion, or traversal.
+      </p>
+    </section>
+
+    <section>
+      <h2>1. General Tree</h2>
+      <h3>Structure:</h3>
+      <p>A tree where nodes can have any number of children.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Highly adaptable for representing arbitrary hierarchical data such as file systems, organizational charts, etc.</li>
+        <li>Suitable for scenarios where no strict balancing or ordering is needed.</li>
+      </ul>
+      <h3>Limitations:</h3>
+      <ul>
+        <li>Operations like search may be inefficient (linear time in the worst case) due to lack of specific balancing or ordering rules.</li>
+        <li>Conversion to more specialized tree structures may be necessary for optimizing specific tasks.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Binary Search Tree (BST)</h2>
+      <h3>Structure:</h3>
+      <p>A binary tree where each node has at most two children:</p>
+      <ul>
+        <li>Left child values are smaller than the parent.</li>
+        <li>Right child values are greater than the parent.</li>
+      </ul>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Efficient average-case search, insertion, and deletion operations (O(log n)).</li>
+        <li>Simplifies handling ordered datasets, allowing easy in-order traversal for sorting.</li>
+      </ul>
+      <h3>Limitations:</h3>
+      <ul>
+        <li>Can degrade into a linked list (O(n) operations) if unbalanced.</li>
+        <li>Balancing must be maintained (e.g., using AVL or Red-Black Trees).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. AVL Tree</h2>
+      <h3>Structure:</h3>
+      <p>A self-balancing BST where the height difference between the left and right subtrees of any node is at most 1.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Guarantees O(log n) for search, insertion, and deletion operations.</li>
+        <li>Automatically balances after insertions or deletions using rotations.</li>
+      </ul>
+      <h3>Limitations:</h3>
+      <ul>
+        <li>More complex to implement compared to standard BSTs.</li>
+        <li>Higher overhead due to strict balancing requirements.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. 2-3 Tree</h2>
+      <h3>Structure:</h3>
+      <p>A self-balancing search tree where each node can have 2 or 3 children and store 1 or 2 keys.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Guaranteed logarithmic height, ensuring O(log n) operations.</li>
+        <li>Easier to implement compared to Red-Black Trees, especially for multi-way branching.</li>
+      </ul>
+      <h3>Limitations:</h3>
+      <ul>
+        <li>More memory overhead due to flexible node structure.</li>
+        <li>Less commonly used today, often replaced by simpler balancing trees like Red-Black or B-trees.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Red-Black Tree</h2>
+      <h3>Structure:</h3>
+      <p>A self-balancing BST where nodes are colored red or black, maintaining specific rules to ensure balance.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Guarantees O(log n) for search, insertion, and deletion operations.</li>
+        <li>More memory-efficient than AVL Trees due to simpler balancing rules.</li>
+      </ul>
+      <h3>Limitations:</h3>
+      <ul>
+        <li>Slightly slower search performance compared to AVL Trees due to less strict balancing.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Heap</h2>
+      <h3>Structure:</h3>
+      <p>A complete binary tree satisfying the heap property:</p>
+      <ul>
+        <li><strong>Max-Heap:</strong> Parent node is greater than or equal to its children.</li>
+        <li><strong>Min-Heap:</strong> Parent node is less than or equal to its children.</li>
+      </ul>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Efficient for priority queue operations (O(log n) for insertion and extraction).</li>
+        <li>Simple implementation due to array-based representation.</li>
+      </ul>
+      <h3>Limitations:</h3>
+      <ul>
+        <li>Not suitable for general-purpose search (linear time in the worst case).</li>
+        <li>No order between sibling nodes.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Trie (Prefix Tree)</h2>
+      <h3>Structure:</h3>
+      <p>A tree used to store strings, where each node represents a character of a string.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Efficient for prefix-based operations like autocomplete and dictionary lookups.</li>
+        <li>Search, insert, and delete operations have time complexity proportional to the word length (O(L)).</li>
+      </ul>
+      <h3>Limitations:</h3>
+      <ul>
+        <li>High memory usage due to storing many nodes, especially for sparse datasets.</li>
+        <li>Strategies like compressed tries can reduce memory usage.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

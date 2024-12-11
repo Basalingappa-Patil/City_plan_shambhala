@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Space_Time</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Bootstrap CSS File -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS File -->
+  <link href="styles.css" rel="stylesheet">
+  <link href="algorithmcss.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+  .auto-style3 {
+	  font-family: "Times New Roman", sans-serif;
+	  font-size: medium;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header id="header" class=" text-white text-center py-3">
+    <div class="container">
+      <h1>&nbsp;</h1>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="container mt-4">
+    <!-- Introduction Section -->
+    <section id="intro" class="mb-5">
+      <h2 class="text-center">Efficiency And Growth in Algorithms</h2>
+      <p>In the world of algorithms, space and time efficiency are paramount for 
+	  creating effective and scalable solutions. Space efficiency, or space 
+	  complexity, focuses on the amount of memory an algorithm requires, while 
+	  time efficiency, or time complexity, measures how quickly an algorithm 
+	  runs. Understanding the order of growth helps us predict how an 
+	  algorithm's performance changes as the input size increases. These 
+	  concepts are crucial for optimizing code, ensuring quick execution times, 
+	  and managing resources effectively. </p>
+   </section>
+    
+    <!-- Iteration,Recursion,Backtracking Section -->
+    <section class="mb-5">
+      <h3 class="text-left">Space Efficiency</h3>
+        <p class="MsoNormal"><span>Space efficiency can be defined as a way to 
+		optimize memory. The basic goal is to run an algorithm with the minimum 
+		memory space.<o:p></o:p></span></p>
+		<p class="MsoNormal"><span>Importance of Space Efficiency:<o:p></o:p></span></p>
+		<ul>
+			<li>
+			<p class="MsoNormal"><span>Resource Management: Efficient use of 
+			memory is crucial, especially in systems with limited resources, 
+			such as embedded systems or mobile devices.<o:p></o:p></span></p>
+			</li>
+			<li>
+			<p class="MsoNormal"><span>Performance: Excessive memory usage can 
+			lead to increased swap times, reduced performance, and potential 
+			crashes.<o:p></o:p></span></p>
+			</li>
+			<li>
+			<p class="MsoNormal"><span>&nbsp;Scalability: Space-efficient 
+			algorithms can handle larger datasets without exceeding memory 
+			limits.<o:p></o:p></span></p>
+			</li>
+		</ul>
+    </section>
+    <section class="mb-5">
+      <h3 class="text-left">Time Efficiency</h3>
+        <p class="MsoNormal"><span>Time Efficiency:<o:p></o:p></span></p>
+		<p class="MsoNormal"><span>Time efficiency, also known as time 
+		complexity, refers to the amount of time an algorithm takes to complete 
+		relative to the input size. It measures how efficiently an algorithm 
+		executes. &nbsp;<o:p></o:p></span></p>
+		<p class="MsoNormal"><span>Importance of Time Efficiency:<o:p></o:p></span></p>
+		<ul>
+			<li>
+			<p class="MsoNormal"><span>Speed: Faster algorithms provide quicker 
+			results, which is critical in real-time applications like gaming, 
+			trading, and navigation.<o:p></o:p></span></p>
+			</li>
+			<li>
+			<p class="MsoNormal"><span>Cost: Time-efficient algorithms can 
+			reduce computing costs, particularly in cloud computing environments 
+			where processing power is billed by usage.<o:p></o:p></span></p>
+			</li>
+			<li>
+			<p class="MsoNormal"><span>User Experience: Applications that run 
+			efficiently provide a better user experience, with quicker response 
+			times and less waiting.</span></p>
+			</li>
+		</ul>
+    </section>
+     <section class="mb-5">
+      <h3 class="text-left">Classes of Problems and Order of Growth</h3>
+		 <p class="MsoNormal" style="mso-add-space: auto;"><span>Orders of 
+		 time growth classify algorithms based on how their execution time 
+		 increases with input size.</span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;"><span>1. Constant 
+		 time O(1) : The runtime remains the same regardless of the input size.<o:p></o:p></span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;"><span>2. 
+		 Logarithmic time O(logn): The runtime grows slowly, increasing 
+		 logarithmically as the input size grows, often seen in binary search. <o:p></o:p>
+		 </span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;"><span>3. Linear 
+		 time O(n): The runtime increases proportionally to the input size, 
+		 common in simple loops.<o:p></o:p></span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;"><span>4. 
+		 Linearithmic time O(nlogn): The runtime grows faster than linear but 
+		 slower than quadratic. <o:p></o:p></span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;"><span>
+		 <font size="3">5. Quadratic time O(n&sup2;): The runtime grows 
+		 quadratically, often in nested loops. </font> <o:p></o:p></span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;"><span>
+		 <font size="3">6. Cubic time O(n&sup3;): The runtime increases even more 
+		 steeply that quadratic.&nbsp; </font><o:p></o:p></span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;"><span>7. 
+		 Exponential time O(2n): The runtime grows exponentially, with each 
+		 additional input, typical of brute-force solutions. <o:p></o:p></span>
+		 </p>
+		 <p class="MsoNormal" style="mso-add-space: auto;"><span>8. Factorial 
+		 time O(n!): The runtime grows extremely fast, seen in problems with 
+		 extensive permutations. <o:p></o:p></span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;">
+		 <span class="auto-style3">Each class reflects how the algorithm's 
+		 efficiency scales, helping determine its practicality for large inputs.</span><span lang="EN-IN"><o:p></o:p></span></p>
+    </section>
+
+   
+  </main>
+  
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white text-center py-3">
+  </footer>
+
+  <!-- Bootstrap JS File -->
+  <script src="jquery-3.5.1.slim.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Algorithm Design</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Bootstrap CSS File -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS File -->
+  <link href="styles.css" rel="stylesheet">
+  <link href="algorithmcss.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+  .auto-style1 {
+	  margin-left: 40px;
+  }
+  .auto-style2 {
+	  margin-left: 80px;
+  }
+  </style>
+  </head>
+
+<body>
+  <!-- Header Section -->
+  <header id="header" class=" text-white text-center py-3">
+    <div class="container">
+      <h1>&nbsp;</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mt-4">
+    <!-- Introduction Section -->
+    <section id="intro" class="mb-5">
+    <h2 class="text-center">
+	Algorithm Design Techniques</h2>
+        <p class="MsoNormal"><span>Algorithm design techniques are fundamental 
+		strategies used to develop efficient and effective solutions to 
+		computational problems. These techniques provide a structured approach 
+		to solving complex issues by breaking them down into manageable steps. 
+		Common techniques include divide and conquer, dynamic programming, 
+		greedy algorithms, and backtracking, each offering unique methods to 
+		optimize performance and resource usage. By mastering these techniques, 
+		one can create algorithms that are not only correct but also performant, 
+		scalable, and adaptable to various scenarios. This foundational 
+		knowledge is essential for anyone looking to excel in computer science 
+		and software development, as it empowers them to tackle a wide range of 
+		challenges with confidence and precision.</span></p>
+    </section>
+    <!-- Differentiation Section -->
+</section>
+  </main>
+
+  
+  <!-- Bootstrap JS File -->
+  <script src="jquery-3.5.1.slim.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <section class="container">
+  <h3>Techniques</h3>
+	  <h4>Brute Force</h4>
+	  <p class="auto-style1">Brute force is a straight forward approach to solving a problem, 
+	  usually, directly based on the problem statement and definitions of the 
+	  concepts involved. </p>
+	  <p class="auto-style1">Basically it’s an exhaustive algorithm. Example: a brute force 
+	  algorithm to find the divisors of a natural number ‘n’ would enumerate all 
+	  integers from 1 to n and check whether each of them divides n without 
+	  reminders.</p>
+	  <p class="auto-style1">Examples: </p>
+	   <ul class="auto-style2">
+		   <li>Selection Sort</li>
+		   <li>Bubble Sort
+	   </li>
+		   <li>Sequential Search</li>
+		   <li>Brute Force String Match <br></li>
+	  </ul>
+	  
+	  
+	  
+		  <h4>Decrease and Conquer</h4>
+	 
+	  <p class="auto-style1">It is based on exploiting the relationship between a solution to a 
+	  given instance of a problem and solution to a smaller instance of the same 
+	  problem. </p>
+	  <p class="auto-style1">Once the relation is established, it can be either exploited by 
+	  top-down approach using recursion or bottom-up approach without recursion.</p>
+	  <p class="auto-style2">&nbsp;The technique has variations: </p>
+	  <ul class="auto-style2">
+		  <li>Decrease by a constant </li>
+		  <li>Decrease by a constant factor</li>
+		  <li>Variable size decrease </li>
+	  </ul>
+	  <p class="auto-style1">Examples: </p>
+	   <ul class="auto-style2">
+		   <li>Insertion Sort</li>
+		   <li>Depth First Search</li>
+		   <li>Breadth First Search</li>
+	  </ul>
+	  
+			  <h4>Divide and Conquer</h4>
+	  
+	  <p class="auto-style1">The technique is based on based on multi-branched 
+	  recursion. A divide and conquer algorithm works by recursively breaking 
+	  down a problem into two or more sub-problems of the same or related type, 
+	  until these become simple enough to be solved directly. The solutions to 
+	  the sub-problems are then combined to give a solution to the original 
+	  problem. </p>
+	  <p class="auto-style1">Examples: </p>
+	   <ul class="auto-style2">
+		   <li>Merge Sort</li>
+		   <li>Quick Sort
+	   </li>
+		   <li>Binary Search</li>
+	  </ul>
+	  
+	 
+			  <h4>Transform and Conquer</h4>
+	  
+	  <p class="auto-style1">A problem instance is transformed to one of the 
+	  below before the solution is obtained. </p>
+	  <ul>
+		  <li class="auto-style1">
+		  Instance simplification: transform to a simpler or more convenient 
+		  instance of the same problem.<li class="auto-style1">
+		  Representation change: transform to a different representation of the 
+		  same instance.<li class="auto-style1">
+		  Problem reduction: transform to an instance of 
+		  a different problem for which an algorithm is already available.</ul>
+	  <p class="auto-style1">Examples: </p>
+	   <ul class="auto-style2">
+		   <li>AVL Trees&nbsp;&nbsp; </li>
+		   <li>2-3 Trees</li>
+		   <li>Heap Sort</li>
+	  </ul>
+
+			  <h4>Dynamic Programming</h4>
+	  
+	  <p class="auto-style1">&nbsp;Dynamic programming is a method for solving a 
+	  complex problem by breaking it down into a collection of simpler 
+	  sub-problems, solving each of those sub-problems just once, and storing 
+	  their solutions. The next time the same sub-problem occurs, instead of 
+	  recomputing its solution, one simply looks up the previously computed 
+	  solution, thereby saving computation time at the expense of a modest 
+	  expenditure in storage space. </p>
+	  <p class="auto-style1">The technique of storing solutions to subproblems 
+	  instead of recomputing them is called "memoization". Dynamic programming 
+	  algorithms are often used for optimization. A dynamic programming 
+	  algorithm will examine the previously solved subproblems and will combine 
+	  their solutions to give the best solution for the given problem.</p>
+	  <p class="auto-style1">Examples: </p>
+	   <ul class="auto-style2">
+		   <li>Warshall's Algorithm</li>
+		   <li>Floyd's Algorithm</li>
+		   <li>Bellman-Ford Algorithm</li>
+	  </ul>
+
+			  <h4>Greedy Technique</h4>
+	  
+	  <p class="MsoNormal">A greedy algorithm is an algorithmic paradigm that 
+	  follows the problem solving heuristic of making the locally optimal choice 
+	  at each stage with the hope of finding a global optimum.<o:p></o:p></p>
+	  <p class="MsoNormal">In general, greedy algorithms have five components:<o:p></o:p></p>
+	  <ul>
+		  <li class="auto-style1">
+		  A candidate set, from which a solution is created<o:p>.</o:p><li class="auto-style1">
+		  <o:p>A selection function,<span>which chooses the best candidate to be 
+		  added to the solution.</span></o:p><li class="auto-style1">
+		  <p class="MsoNormal">A feasibility function, that is used to determine 
+		  if a candidate can be used to<o:p> contribute to a solution.</o:p></p>
+		  <li class="auto-style1">
+		  <p class="MsoNormal">An objective function, which assigns a value to a 
+		  solution, or a partial solution, and</p>
+		  <li class="auto-style1">
+		  <p class="MsoNormal">A solution function, which will indicate when we 
+		  have discovered a complete<o:p> solution</o:p></p>
+		  <o:p></o:p>
+	  </ul>
+	  <p class="auto-style1">Examples: </p>
+	   <ul class="auto-style2">
+		   <li>Prim's Algorithm</li>
+		   <li>Kruskal's Algorithm</li>
+		   <li>Dijkstra's Algorithm</li>
+	  </ul>
+	  <h4>Space and Time trade-off</h4>
+	  <p class="MsoNormal">A space–time or time–memory trade-off is a case where 
+	  an algorithm or program trades increased space usage with decreased time.
+	  </p>
+	  <p class="MsoNormal">Here, space refers to the data storage consumed in 
+	  performing a given task (RAM, HDD, etc), and time refers to the time 
+	  consumed in performing a given task (computation time or response time).
+	  </p>
+	  <p class="MsoNormal">The most common situation is an algorithm involving a 
+	  lookup table: an implementation can include the entire table, which 
+	  reduces computing time, but increases the amount of memory needed, or it 
+	  can compute table entries as needed, increasing computing time,but 
+	  reducing memory requirements.<o:p></o:p></p>
+	  <p class="auto-style1">Examples: </p>
+	   <ul class="auto-style2">
+		   <li>Hashing</li>
+		   <li>&nbsp;Boyer-Moore Algorithm</li>
+	  </ul>
+	  
+	  <h4>Randomized Algorithms</h4>
+	  <p class="MsoNormal">A randomized algorithm is an algorithm that employs a 
+	  degree of randomness as part of<o:p></o:p></p>
+	  <p class="MsoNormal">its logic. The algorithm typically uses uniformly 
+	  random bits as an auxiliary input to guide<o:p></o:p></p>
+	  <p class="MsoNormal">its behaviour, in the hope of achieving good 
+	  performance in the average case over all<o:p></o:p></p>
+	  <p class="MsoNormal">possible choices of random bits. </p>
+	  <p class="MsoNormal">Formally, the algorithm's performance will be a 
+	  random variable determined by the random bits; thus either the running 
+	  time, or the output (or both) are random variables.<o:p></o:p></p>
+	  <p class="auto-style1">Examples: </p>
+	   <ul class="auto-style2">
+		   <li>Skip List</li>
+		   <li>Random Binary Trees</li>
+	  </ul>
+	  
+	  <h4>Backtracking</h4>
+	  <p class="MsoNormal">Backtracking is a general algorithm for finding all 
+	  (or some) solutions to some computational problem, that incrementally 
+	  builds candidates to the solutions, and abandons each partial candidate 
+	  ("backtracks") as soon as it determines that candidate cannot possibly be 
+	  completed to a valid solution.<o:p></o:p></p>
+	  <p class="MsoNormal">Backtracking is an important tool for solving 
+	  constraint satisfaction problems, such as crosswords, verbal arithmetic, 
+	  Sudoku, and many other puzzles.<o:p></o:p></p>
+	  <p class="auto-style1">Examples: </p>
+	   <ul class="auto-style2">
+		   <li>N Queen's Problem</li>
+	  </ul>
+
+	  
+
+</section>
+
+ <!-- Footer Section -->
+  <footer class="bg-dark text-white text-center py-3">
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dark theme styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #d4c5c5;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+    color: #fff;
+}
+
+.dark-mode a {
+    color: #1abc9c;
+}
+
+/* Header */
+.main-header {
+    background-color: #c3cace;
+    padding: 20px;
+    text-align: center;
+    color: #000000;
+    border-bottom: 2px solid #2980b9;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.main-header p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+}
+
+/* Portfolio Section */
+.portfolio {
+    background-color: #c5adad;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio:hover {
+    transform: scale(1.02);
+}
+
+.portfolio-header {
+    background-color: #c6d7db;
+    padding: 20px;
+    border-bottom: 2px solid #3498db;
+    cursor: pointer;
+}
+
+.portfolio-header h1 {
+    font-size: 2rem;
+    color: #2980b9;
+}
+
+.portfolio-header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+.portfolio-details {
+    padding: 20px;
+    display: none;
+}
+
+.portfolio-details.active {
+    display: block;
+}
+
+.portfolio-details h2,
+.portfolio-details h3 {
+    color: #2980b9;
+}
+
+.portfolio-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.portfolio-details ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.portfolio-details blockquote {
+    font-style: italic;
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+    margin-top: 20px;
+    color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-container {
+        padding: 20px;
+    }
+
+    .portfolio-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-header p {
+        font-size: 1rem;
+    }
+
+    .portfolio-details h2,
+    .portfolio-details h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-container {
+        padding: 15px;
+    }
+
+    .portfolio {
+        width: 100%;
+    }
+
+    .portfolio-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-header p {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-details ul li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Button to Toggle Theme */
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Styles */
+footer {
+
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer Button Styling */
+.next-page-btn {
+    background-color: #004d80; /* Blue background */
+    color: white; /* White text */
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Removes underline from link */
+    transition: background-color 0.3s ease;
+}
+
+.next-page-btn:hover {
+    background-color: #005e99; /* Darker blue on hover */
+}

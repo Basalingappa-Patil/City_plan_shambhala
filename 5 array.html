@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Space and time efficiency</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Bootstrap CSS File -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS File -->
+  <link href="styles.css" rel="stylesheet">
+  </head>
+
+<body>
+  <!-- Header Section -->
+  <header id="header" class="bg-primary text-white text-center py-3">
+    <div class="container">
+      <h1>Need of array query algorithm</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mt-4">
+    <!-- Introduction Section -->
+    <section id="intro" class="mb-5">
+    <h2 class="text-center">
+	 Array query algorithms are fundamental in computer science for efficiently answering queries about array data. These algorithms are particularly important in applications requiring frequent or complex queries, as they reduce the computational overhead and improve performance. .</h2>
+        <p class="MsoNormal"Array query algorithms are fundamental in computer science for efficiently answering queries about array data. These algorithms are particularly important in applications requiring frequent or complex queries, as they reduce the computational overhead and improve performance. .</p>
+		<p class="MsoNormal">&nbsp;</p>
+		<p class="MsoNormal"><o:p></o:p></p>
+		<o:p>
+		<pre></pre>
+		
+
+      <p>&nbsp;</p>
+    </section>
+    <!-- Differentiation Section -->
+</section>
+  </main>
+
+  
+  <!-- Bootstrap JS File -->
+  <script src="jquery-3.5.1.slim.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <ol start="1">
+	<h3><strong><span>Need of array query algorithm</strong></h3>
+	  <li>
+	  <p class="MsoNormal"><span><strong>1.	Efficiency in Querying:: When working with large datasets, answering queries (e.g., range sums, maximum values, or specific conditions) repeatedly can be computationally expensive if done naively. Query algorithms optimize these operations.</strong></span></p>
+      <p class="MsoNormal"><span><strong>2. Frequent Queries in Real-World Problems::: In areas like databases, analytics, and game development, queries on large datasets need to be performed quickly to maintain system responsiveness..</strong></span></p>
+	  <p class="MsoNormal"><span><strong>2. Dynamic Updates::: Many scenarios require the array to be updated frequently, necessitating algorithms that can efficiently manage both queries and updates.  </strong></span></p>
+	  <p class="MsoNormal"><span><strong>2.	Scalability::: As data scales, efficient query algorithms ensure that operations remain computationally feasible.</strong></span></p>
+	  
+	  <ul>
+		  <li>
+		  <p class="MsNormal"><span><strong></strong> .
+			 
+			.</span></p>
+		  </li>
+		  <li>
+		  <p class="MsNormal"><span><strong>:</strong> </span></p>
+		  </li>
+	  </ul>
+	  </li>
+	  <li>
+		<h3><strong><span>Principles of array query algorithm</strong></h3>
+	  <p><span><strong></strong></span></p>
+	  <ul>
+		  <li>
+		  <p><span><strong>Proceesing:</strong>  	Data is preprocessed into auxiliary structures (e.g., prefix sums, segment trees, sparse tables) to enable faster queries later.
+            o	Preprocessing may take O(n) or O(nlogn) time but significantly reduces query time.
+            .</span></p>
+          <p><span><strong>Divide and conquer:</strong>  	o	Problems are broken into smaller sub-problems (e.g., in segment trees or Fenwick trees) to allow queries and updates in O(logn)..
+              .
+                .</span></p>
+                <p><span><strong>Space time tradeoff:</strong>  	o	Use additional memory (auxiliary data structures) to improve time complexity of queries, trading space for speed..
+                    
+                    .</span></p>
+                    <p><span><strong>lazy evaluation:</strong>  	For dynamic queries, such as range updates, computations are deferred until absolutely necessary (e.g., in segment trees with lazy propagation)..
+                        .
+                        .</span></p>
+		  </li>
+		  <li>
+		  <p><span><strong></strong>  </span></p>
+		  </li>
+	  </ul>
+	  </li>
+	  <li>
+		<h3><strong><span>key array query algorithm</strong></h3>
+            <p><span><strong>prefix Sums:</strong>  	o	o	Allows O(1) range sum queries after O(n) preprocessing.
+                	Example Query: "Find the sum of elements in range [l,r]."
+                ..
+                .
+                  .</span></p>
+            <p><span><strong>Segment trees:</strong>  	o	o	Supports range queries (e.g., range sum, range minimum) and point/range updates in O(logn).
+                	Ideal for dynamic scenarios with frequent updates.
+                ..
+                    .
+                      .</span></p>
+            <p><span><strong>Fenwick tree:</strong>  	o	o	Efficient for cumulative frequency queries and point updates, with O(logn) complexity.
+                o	Space-efficient compared to segment trees.
+                ..
+                        .
+                          .</span></p>
+            <p><span><strong>sparse table:</strong>  	o	o	Used for static range queries, particularly for idempotent operations (e.g., min, max, gcd).
+                o	Provides O(1) query time after O(nlogn) preprocessing
+                .
+                            .
+                              .</span></p>
+            <p><span><strong>Mo s Algorithm:</strong>  	o	o	A block-based approach for offline range queries.
+                o	Useful when preprocessing is not feasible, with O(n⋅q)O(\sqrt{n} \cdot q)O(n⋅q) complexity for qqq queries.
+                ________________________________________
+                
+                                .
+                                  .</span></p>
+    <h3><strong><span>Principles of array query algorithm</strong></h3> 
+        <p><span><strong></strong></span></p>
+	  <ul>
+		  <li>
+		  <p><span><strong>database systems:</strong>  	Efficient indexing and query optimization for analytics and search (e.g., SUM, MIN, MAX operations on rows or columns).
+            .</span></p>
+          <p><span><strong>web analytic and monotiring:</strong>  	Calculating cumulative metrics (e.g., page views, user activity) over time.
+              .
+                .</span></p>
+                <p><span><strong>Gaming and simulatation:</strong>  	Fast updates and queries on game states or physics simulations..
+                    
+                    .</span></p>
+                    <p><span><strong>Finanace:</strong>  Analyzing stock prices, calculating moving averages, and other range-based computations...
+                        .
+                        .</span></p>
+		  </li> 
+                                
+    <h3><strong><span>application of array query algorithm</strong></h3> 
+        <p><span><strong></strong></span></p>
+	  <ul>
+		  <li>
+		  <p><span><strong>database systems:</strong>  	Efficient indexing and query optimization for analytics and search (e.g., SUM, MIN, MAX operations on rows or columns).
+            .</span></p>
+          <p><span><strong>web analytic and monotiring:</strong>  	Calculating cumulative metrics (e.g., page views, user activity) over time.
+              .
+                .</span></p>
+                <p><span><strong>Gaming and simulatation:</strong>  	Fast updates and queries on game states or physics simulations..
+                    
+                    .</span></p>
+                    <p><span><strong>Finanace:</strong>  Analyzing stock prices, calculating moving averages, and other range-based computations...
+                        .
+                        .</span></p>
+		  </li> 
+                                
+	  <p><span><strong>:</strong></span></p>
+	  <ul>
+        
+		  <li>
+		  <p><span><strong></strong> ..</span></p>
+		  </li>
+          <h3><strong><span></strong></h3> 
+		  <li>
+			<p><span><strong></strong>
+		  <p><span><strong>:</strong> 
+		   </span></span></p>
+		  </li>
+	  </ul>
+	  </li>
+  </ol>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About searching Algorithms</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="../ABC/algorithmcss.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="text-white text-center py-3">
+        <div class="container">
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mt-4">
+        <!-- Introduction Section -->
+        <section id="intro" class="mb-4">
+            <h2 class="text-center">Searching Algorithms</h2>
+			<p class="MsoNormal">Sorting algorithms are designed to arrange data 
+			in a particular order (ascending or descending). They are crucial 
+			for optimizing search capabilities and improving data handling 
+			efficiency.<o:p></o:p></p>
+        
+	<h3 class="MsoNormal">Common Searching Algorithms:<o:p></o:p></h3>
+	<h4>Linear Search:</h4>
+	<p><span>Linear search is the simplest searching algorithm that scans each 
+	element of a list until the desired element is found or the list ends. It is 
+	straightforward but can be inefficient for large lists as its time 
+	complexity is O(n).</span></p>
+	<h4>Brute Force String Search:</h4>
+	<p><span>Brute Force String Search is a straightforward method for finding a 
+	substring (pattern) in a string (text). It checks for the pattern at every 
+	position in the text one by one. While simple to implement, it can be slow 
+	with a time complexity of O(mn), where m is the length of the pattern and n 
+	is the length of the text.</span></p>
+	<h4>Knuth-Morris-Pratt (KMP) Algorithm:</h4>
+	<p><span>The Knuth-Morris-Pratt (KMP) algorithm improves the search 
+	efficiency by preprocessing the pattern to create a partial match table 
+	(also known as the "lps" array) that allows the algorithm to skip 
+	unnecessary comparisons. This results in a time complexity of O(n), making 
+	it significantly faster than brute force for larger texts.</span></p>
+	<h4>Boyer-Moore Algorithm:</h4>
+	<p><span>The Boyer-Moore algorithm is one of the most efficient string 
+	searching algorithms. It preprocesses the pattern to create two tables: the 
+	"bad character rule" and the "good suffix rule." These tables help the 
+	algorithm skip sections of the text, reducing the number of comparisons. The 
+	average-case time complexity is O(n/m), making it extremely efficient for 
+	large texts.</span></p>
+
+        </section>
+        </main>
+        
+         <!-- Footer Section -->
+  <footer class="bg-dark text-white text-center py-3">
+  </footer>
+
+        </body>
+        </html>

@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Algorithms</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="keywords">
+<meta content="" name="description">
+<!-- Favicons -->
+<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+<!-- Bootstrap CSS File -->
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Libraries CSS Files -->
+<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+<!-- Main Stylesheet File -->
+<link href="css/style.css" rel="stylesheet">
+<link href="usecss.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- Header -->
+<header id="header" class="py-3" style="left: 0; right: 0; top: 0; height: 125px; background-color: grey;">
+	<div class="container-fluid">
+		<div id="logo" class="pull-left">
+			<h1><a class="scrollto" href="index.html">Exploring the world of algorithms</a></h1>
+			<nav>
+				<ul class="nav justify-content-center">
+					<li class="nav-item">
+					<a class="nav-link text-white" href="Course_Synopsis.html">Course 
+					Synopsis</a></li>
+					<li class="nav-item">
+					<a class="nav-link text-white" href="projectinfo.html">Course 
+					Project</a></li>
+					<li class="nav-item">
+					<a class="nav-link text-white" href="portfolio.html">The Team</a></li>
+					<li class="nav-item">
+					<a class="nav-link text-white" href="reflections.html">Course 
+					Learning Reflections</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<!-- Main content --> <main > 
+<!-- Introduction Section -->
+<!-- Use Cases Section -->
+<section id="use-cases" class="section">
+<h1 class="text-center">Business Cases</h1>
+	<div class="container">
+
+		<div class="use-case">
+			<h3>Occurence of Drought</h3>
+			<button class="learn-more-btn" onclick="openModal('modal1')">Learn More
+			</button>
+			<div id="modal1" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal1')">&times;</span>
+					<p>Since the city is located in the state of Gujarat, there 
+					is a possibility of having periodic droughts which could affect 
+					several factors of the city like Agricultural productivity, 
+					Industrial area, Wildlife sanctuary. This could result as a 
+					long term challenge since the water supply is a major problem 
+					in the city.</p>
+					<p><strong>Possible solution</strong>: The problem could be 
+					addressed with a solution by using Divide and Conquer technique 
+					and BFS. </p>
+					<p>Divide and Conquer: Divide the region into smaller zones, 
+					which has its own water needs and sources.</p>
+					<p>Solve the problem with techniques like BFS which finds the 
+					shortest path by which the source of water supply can be used 
+					appropriately.</p>
+					<p>This could then be integrated as a whole to present as an 
+					efficient method to address the problem.</p>
+					<p><strong>Related SDG's</strong></p>
+					<p><strong>SDG 6</strong> - Clean Water and Sanitation: This 
+					goal focuses on ensuring availability and sustainable management 
+					of water and sanitation for all. Addressing drought and optimizing 
+					water supply directly aligns with improving access to clean 
+					water and promoting sustainable water management.</p>
+					<p><strong>SDG 11</strong> - Sustainable Cities and Communities: 
+					Ensuring sustainable water management and addressing the challenges 
+					of drought contribute to making cities and human settlements 
+					inclusive, safe, resilient, and sustainable.</p>
+				</div>
+			</div>
+		</div>
+		<div class="use-case">
+			<h3>Public Transportation Management </h3>
+			<button class="learn-more-btn" onclick="openModal('modal2')">Learn More
+			</button>
+			<div id="modal2" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal2')">&times;</span>
+					<p>The level of designing the city has been done to an extent 
+					where maximum of the facilities are affordable, feasible and 
+					the city aims that the people live with peace and harmony (as 
+					the name suggests). As a result, there are various facilities 
+					that could be used and they actually prove to be a necessary 
+					factor in the overall development of the city. Transportation 
+					is one such facility that everyone is in need of. So, planning 
+					proper placement of stations, stops, and parking areas is a 
+					crucial step for seamless connectivity. This could lead to several 
+					other factors like traffic management, efficient routes, etc.</p>
+					<p><strong>Possible solution: </strong></p>
+					<p>The problem could be addressed with a solution by using Divide 
+					and Conquer technique and BFS. </p>
+					<p>Graph algorithms: The use of graph algorithms could be done 
+					to model the city’s infrastructure and to analyze traffic patterns. 
+					BFS could be used to determine the best locations for transportation 
+					hubs. </p>
+					<p>This could then be integrated as a whole to present as an 
+					efficient method to address the problem.</p>
+					<p><strong>Related SDG's</strong></p>
+					<p><strong>SDG 8</strong> - Decent Work and Economic Growth: 
+					Efficient public transportation facilitates access to employment 
+					opportunities, education, and services, thereby promoting inclusive 
+					and sustainable economic growth, productive employment, and 
+					decent work for all.</p>
+					<p><strong>SDG 11 </strong>- Sustainable Cities and Communities: 
+					This goal focuses on making cities and human settlements inclusive, 
+					safe, resilient, and sustainable. Efficient public transportation 
+					systems contribute to reducing traffic congestion, improving 
+					air quality, and enhancing overall urban mobility, making cities 
+					more sustainable.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h6 class="text-right">Amulya Chougale </h6>
+</section>
+<section id="use-cases" class="section">
+	<div class="container">
+		<div class="use-case">
+			<h3>Waste Management and Recycling</h3>
+			<button class="learn-more-btn" onclick="openModal('modal3')">Learn More
+			</button>
+			<div id="modal3" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal3')">&times;</span>
+					<p><strong>Problem</strong>:<br>Segregation and routing of waste 
+					from households to recycling centers, minimizing operational 
+					costs and environmental impact. </p>
+					<p><strong>Solution</strong>:<br>•Algorithm: Implement a sorting 
+					algorithm like Merge Sort to classify waste based on recyclability 
+					and contamination levels. <br>•Engineering Implementation: Use 
+					IoT sensors in bins to categorize waste and prioritize pick-up 
+					routes. Optimize waste collection routes using the Travelling 
+					Salesman Problem (TSP) approach.</p>
+					<p><strong>Related SDG</strong>: <br>Goal 12 - Responsible Consumption 
+					and Production, by promoting efficient waste management systems.</p>
+				</div>
+			</div>
+		</div>
+		<div class="use-case">
+			<h3>Renewable Energy Grid Optimization</h3>
+			<button class="learn-more-btn" onclick="openModal('modal4')">Learn More
+			</button>
+			<div id="modal4" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal4')">&times;</span>
+					<p><strong>Problem:</strong> <br>Efficiently distributing solar 
+					and wind-generated energy across residential, industrial, and 
+					public zones. <br><strong>Solution</strong>:<br>•Algorithm:Use 
+					Minimum Spanning Tree (MST) to optimize the energy grid infrastructure 
+					and distribution.<br>•Engineering Implementation:Model energy 
+					connections as a graph with energy demand as weights. Deploy 
+					Kruskal’s algorithm to design the most cost-effective grid. 
+					Use dynamic programming to adapt grid optimization based on 
+					energy consumption patterns.<br><strong>Related SDG</strong>:<br>
+					<strong>Goal 7 </strong>- Affordable and Clean Energy, by ensuring 
+					efficient and sustainable energy distribution.</p>
+				</div>
+			</div>
+		</div>
+		<div class="use-case">
+			<h3>&nbsp;Optimizing Public Transport Routes</h3>
+			<button class="learn-more-btn" onclick="openModal('modal5')">Learn More
+			</button>
+			<div id="modal5" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal5')">&times;</span>
+					<p><strong>Problem</strong>: <br>Efficiently connecting 10 taluks 
+					using public transportation, minimizing travel time for 7.5 
+					million residents.<br><strong>Solution</strong>: <br>• Algorithm: 
+					Apply Dijkstra’s algorithm for finding the shortest path between 
+					transportation hubs. Use graph traversal to map roads and calculate 
+					optimal routes.<br>•Engineering Implementation: <br>Represent 
+					the city as a weighted graph where nodes are hubs and edges 
+					are road distances. <br>Prioritize high-demand routes using 
+					population data from different areas. <br>Use Breadth-First 
+					Search (BFS) for exploring potential alternative routes during 
+					emergencies. <br><strong>Related SDG</strong>:<br><strong>Goal 
+					11</strong> - Sustainable Cities and Communities, by ensuring 
+					accessible, efficient, and sustainable public transportation.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h6 class="text-right">Harsha&nbsp; Naik </h6>
+</section>
+<section id="use-cases" class="section">
+	<div class="container">
+		<div class="use-case">
+			<h3>Water Supply Management</h3>
+			<button class="learn-more-btn" onclick="openModal('modal6')">Learn More
+			</button>
+			<div id="modal6" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal6')">&times;</span>
+					<p><strong>Problem</strong>: Distributing water efficiently 
+					while preventing wastage in different city zones. <br>
+					<strong>Solution</strong>: <br>•Algorithm: Depth-First Search 
+					(DFS) to detect leakages and monitor pipelines, and Quick Sort 
+					for prioritizing repairs based on severity. <br>•Engineering 
+					Implementation: Use smart meters to collect data on water flow. 
+					Implement algorithms for real-time pipeline monitoring and repair 
+					scheduling.<br><strong>Related SDG</strong>:<br><strong>Goal 
+					6</strong> - Clean Water and Sanitation, by improving water 
+					efficiency and reducing wastage. </p>
+				</div>
+			</div>
+		</div>
+		<div class="use-case">
+			<h3>Emergency Services Deployment</h3>
+			<button class="learn-more-btn" onclick="openModal('modal7')">Learn More
+			</button>
+			<div id="modal7" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal7')">&times;</span>
+					<p><strong>Problem</strong>: Rapid response to emergencies (e.g., 
+					healthcare, fire incidents) in densely populated areas. <br>
+					<strong>Solution</strong>: <br>•Algorithm: A Search Algorithm 
+					to find the fastest routes from emergency hubs to incident locations.
+					<br>•Engineering Implementation: Represent the city layout as 
+					a grid with heuristic-based weights for road traffic and distances. 
+					Integrate real-time traffic data for dynamic route adjustments.
+					<br><strong>Related SDG</strong>:<br><strong>Goal 3</strong> 
+					- Good Health and Well-being, by ensuring timely access to emergency 
+					services. </p>
+				</div>
+			</div>
+		</div>
+		<div class="use-case">
+			<h3>Smart Traffic Management System</h3>
+			<button class="learn-more-btn" onclick="openModal('modal8')">Learn More
+			</button>
+			<div id="modal8" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal8')">&times;</span>
+					<p><strong>Problem</strong>:Managing traffic congestion across the city's transportation infrastructure, especially during peak hours in urban and residential zones.
+ <br>
+					<strong>Solution</strong>: <br>•Algorithm: Use Greedy Algorithms for dynamic signal control and A Search Algorithm* for route optimization based on real-time traffic data.
+This system not only improves efficiency but also reduces environmental impact, ensuring sustainable urban mobility.
+<br>•Engineering Implementation: Traffic signals can be optimized using greedy algorithms that prioritize traffic flow based on congestion levels at intersections.
+	A search can be applied to help commuters navigate the shortest and least congested paths.
+	Use real-time data from traffic sensors and IoT devices to update traffic signals and guide vehicles efficiently.
+					<br><strong>Related SDG</strong>:<br><strong>Goal 9</strong> 
+					- Industry, Innovation, and Infrastructure, by enhancing transportation infrastructure with smart technologies to reduce congestion and emissions.					services. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h6 class="text-right">Basalingappa Patil</h6>
+</section>
+<section id="use-cases" class="section">
+	<div class="container">
+		<div class="use-case">
+			<h3>Industry and Infrastructure</h3>
+			<button class="learn-more-btn" onclick="location.href='businesscases.html'">Learn More
+			</button>
+			<div id="modal1" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal1')">&times;</span>
+					<p>Since the city is located in the state of Gujarat, there 
+					is a possibility of having periodic droughts which could affect 
+					several factors of the city like Agricultural productivity, 
+					Industrial area, Wildlife sanctuary. This could result as a 
+					long term challenge since the water supply is a major problem 
+					in the city.</p>
+					<p><strong>Possible solution</strong>: The problem could be 
+					addressed with a solution by using Divide and Conquer technique 
+					and BFS. </p>
+					<p>Divide and Conquer: Divide the region into smaller zones, 
+					which has its own water needs and sources.</p>
+					<p>Solve the problem with techniques like BFS which finds the 
+					shortest path by which the source of water supply can be used 
+					appropriately.</p>
+					<p>This could then be integrated as a whole to present as an 
+					efficient method to address the problem.</p>
+					<p><strong>Related SDG's</strong></p>
+					<p><strong>SDG 6</strong> - Clean Water and Sanitation: This 
+					goal focuses on ensuring availability and sustainable management 
+					of water and sanitation for all. Addressing drought and optimizing 
+					water supply directly aligns with improving access to clean 
+					water and promoting sustainable water management.</p>
+					<p><strong>SDG 11</strong> - Sustainable Cities and Communities: 
+					Ensuring sustainable water management and addressing the challenges 
+					of drought contribute to making cities and human settlements 
+					inclusive, safe, resilient, and sustainable.</p>
+				</div>
+			</div>
+		</div>
+		<div class="use-case">
+			<h3>Smart Waste Management </h3>
+			<button class="learn-more-btn" onclick="location.href='businesscases.html'">Learn More
+			</button>
+			<div id="modal2" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal2')">&times;</span>
+					<p>The level of designing the city has been done to an extent 
+					where maximum of the facilities are affordable, feasible and 
+					the city aims that the people live with peace and harmony (as 
+					the name suggests). As a result, there are various facilities 
+					that could be used and they actually prove to be a necessary 
+					factor in the overall development of the city. Transportation 
+					is one such facility that everyone is in need of. So, planning 
+					proper placement of stations, stops, and parking areas is a 
+					crucial step for seamless connectivity. This could lead to several 
+					other factors like traffic management, efficient routes, etc.</p>
+					<p><strong>Possible solution: </strong></p>
+					<p>The problem could be addressed with a solution by using Divide 
+					and Conquer technique and BFS. </p>
+					<p>Graph algorithms: The use of graph algorithms could be done 
+					to model the city’s infrastructure and to analyze traffic patterns. 
+					BFS could be used to determine the best locations for transportation 
+					hubs. </p>
+					<p>This could then be integrated as a whole to present as an 
+					efficient method to address the problem.</p>
+					<p><strong>Related SDG's</strong></p>
+					<p><strong>SDG 8</strong> - Decent Work and Economic Growth: 
+					Efficient public transportation facilitates access to employment 
+					opportunities, education, and services, thereby promoting inclusive 
+					and sustainable economic growth, productive employment, and 
+					decent work for all.</p>
+					<p><strong>SDG 11 </strong>- Sustainable Cities and Communities: 
+					This goal focuses on making cities and human settlements inclusive, 
+					safe, resilient, and sustainable. Efficient public transportation 
+					systems contribute to reducing traffic congestion, improving 
+					air quality, and enhancing overall urban mobility, making cities 
+					more sustainable.</p>
+				</div>
+			</div><div class="use-case">
+			<h3>Water connectivity and Sanitation</h3>
+			<button class="learn-more-btn" onclick="location.href='businesscases.html'">Learn More
+			</button>
+			<div id="modal1" class="modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal('modal1')">&times;</span>
+					<p>Since the city is located in the state of Gujarat, there 
+					is a possibility of having periodic droughts which could affect 
+					several factors of the city like Agricultural productivity, 
+					Industrial area, Wildlife sanctuary. This could result as a 
+					long term challenge since the water supply is a major problem 
+					in the city.</p>
+					<p><strong>Possible solution</strong>: The problem could be 
+					addressed with a solution by using Divide and Conquer technique 
+					and BFS. </p>
+					<p>Divide and Conquer: Divide the region into smaller zones, 
+					which has its own water needs and sources.</p>
+					<p>Solve the problem with techniques like BFS which finds the 
+					shortest path by which the source of water supply can be used 
+					appropriately.</p>
+					<p>This could then be integrated as a whole to present as an 
+					efficient method to address the problem.</p>
+					<p><strong>Related SDG's</strong></p>
+					<p><strong>SDG 6</strong> - Clean Water and Sanitation: This 
+					goal focuses on ensuring availability and sustainable management 
+					of water and sanitation for all. Addressing drought and optimizing 
+					water supply directly aligns with improving access to clean 
+					water and promoting sustainable water management.</p>
+					<p><strong>SDG 11</strong> - Sustainable Cities and Communities: 
+					Ensuring sustainable water management and addressing the challenges 
+					of drought contribute to making cities and human settlements 
+					inclusive, safe, resilient, and sustainable.</p>
+				</div>
+			</div>
+		</div>
+
+		</div>
+	</div>
+	<h6 class="text-right">Basavant Mahalingapur </h6>
+</section>
+<footer id="footer">
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 footer-links">
+					<h4>ta Analyzing &amp; Algorithms</h4>
+					<ul>
+						<li><i class="ion-ios-arrow-right"></i>
+						<a href="projectinfo.html">Course Project</a></li>
+						<li><i class="ion-ios-arrow-right"></i>
+						<a href="portfolio.html">The Team</a></li>
+						<li><i class="ion-ios-arrow-right"></i>
+						<a href="intro.html">Course Learning Reflections </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- #footer --><a class="back-to-top" href="#"><i class="fa fa-chevron-up"></i>
+</a>
+<!-- JavaScript Libraries -->
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/superfish/hoverIntent.js"></script>
+<script src="lib/superfish/superfish.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+<!-- JavaScript -->
+<script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

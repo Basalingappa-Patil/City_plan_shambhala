@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unified Sidebar Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: rgba(71, 59, 59, 0.8); /* Dark transparent background */
+            color: white;
+            padding: 15px;
+            position: fixed;
+            left: -250px; /* Initially hidden */
+            height: 100%;
+            overflow-y: auto;
+            transition: left 0.3s ease; /* Smooth transition */
+            z-index: 1000; /* Ensure it is above other content */
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .toggle-button {
+        position: fixed;
+        left: 20px; /* Initial position */
+        top: 20px;
+         background: rgb(157, 221, 128);; /* White transparent background */
+         color: rgb(0, 0, 0);
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1001;
+        width: 30px; /* Fixed width for small square background */
+         height: 30px; /* Fixed height for small square background */
+        display: flex;
+        justify-content: center; /* Center the icon horizontally */
+        align-items: center; /* Center the icon vertically */
+        border-radius: 4px; /* Optional: rounded corners for a subtle effect */
+        transition: left 0.3s ease;
+        }
+
+        .content {
+            margin-left: 0; /* Default position */
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+
+        section {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+            margin: 20px 0;
+        }
+
+        header {
+            background-color: cadetblue;
+            color: aliceblue;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        .sidebar.active {
+            left: 0; /* Bring the sidebar into view */
+        }
+
+        .content.shifted {
+            margin-left: 250px; /* Shift the content right */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <h2>Course Reflection and Insights</h2>
+        <a href="#intro">Introduction</a>
+        <a href="#iteration">1. Problems in Nature: Iteration, Recursion, and Backtracking</a>
+        <a href="#recursion">2. Space and Time Efficiency</a>
+        <a href="#backtracking">3. Takeaways from Design Principles</a>
+        <a href="#space-efficiency">4. Hierarchical Data and Tree Structures</a>
+        <a href="#time-efficiency">5. Array Query Algorithms</a>
+        <a href="#design-principles">6. Trees vs Graphss</a>
+        <a href="#tree-data-structures">7. Sorting and Searching Algorithms</a>
+        <a href="#array-query-algorithms">8. Graph Algorithms</a>
+        <a href="#graph-algorithms">9. Algorithm Design Techniques</a>
+    </div>
+    <div class="toggle-button" id="toggle-button">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="content" id="content">
+        <header>
+            <h1>Course Reflection and Insights</h1>
+            <div style="margin-right: -500px;"> Name - Basalingappa B Patil</div>
+            <div style="margin-right: -389px;"> Roll no - 554 </div>
+            <div style="margin-right: -500px;"> <br><button onclick="location.href='https://github.com/Basalingappa-Patil/DAA--ALGORITHMS-AND-CPP-CODES/blob/main'" class="btn-primary">VIEW ON GITHUB</button></span></div>
+        </header>
+        <main>
+            <section id="intro">
+                <h2>Course Learning Reflections</h2>
+                <p>The  course is all about learning the building blocks of problem-solving in computer science. 
+                    As engineers, we dive into how data is organized and how algorithms are designed to handle it efficiently.</p>
+            </section>
+            <section id="iteration">  
+                <h2>1. Problems in Nature: Iteration, Recursion, and Backtracking</h2>
+                <article>
+                    <h3>Iteration</h3>
+                    <p><strong>Definition:</strong> Iteration relies on repeating steps in a controlled loop structure. It’s deterministic and efficient for linear or predictable tasks.</p>
+                    <p><strong>Analogy in Nature:</strong> The growth of annual tree rings illustrates iterative patterns over time.</p>
+                    <p><strong>Algorithmic Applications:</strong> Sorting algorithms like <em>Insertion Sort</em> or <em>Bubble Sort</em>, and searching algorithms like <em>Linear Search</em>.</p>
+                    <pre>
+    <code>
+    long long factorial(int n) {
+        long long result = 1;
+        for (int i = 1; i <= n; ++i) {
+            result *= i;
+        }
+        return result;
+    }
+    </code>
+                    </pre>
+                </article>
+                <article>
+                    <h3>Recursion</h3>
+                    <p><strong>Definition:</strong> Recursion involves a function solving smaller instances of the same problem.</p>
+                    <p><strong>Examples in Nature:</strong> The fractal growth of snowflakes or the Fibonacci sequence in biological structures showcases recursion.</p>
+                    <p><strong>Algorithmic Applications:</strong> <em>Merge Sort</em>, <em>Quick Sort</em>, and <em>Binary Search</em>.</p>
+                    <pre>
+    <code>
+    int fibonacci(int n) {
+        if (n <= 1) {
+            return n; // Base cases: Fibonacci(0) = 0, Fibonacci(1) = 1
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2); // Recursive step
+    }    </code>
+    
+                    </pre>
+                </article>
+                <article>
+                    <h3>Backtracking</h3>
+                    <p><strong>Definition:</strong> Backtracking explores potential solutions systematically and abandons non-feasible paths (pruning).</p>
+                    <p><strong>Examples in Nature:</strong> Ant colonies finding the shortest food path resemble backtracking with optimization.</p>
+                    <p><strong>Algorithmic Applications:</strong> Problems like <em>N-Queens</em>, <em>Sudoku Solvers</em>, and <em>Hamiltonian Path</em>.</p>
+                    <pre>
+    <code>
+    bool isSafe(int board[][10], int row, int col, int N) {
+        for (int i = 0; i < row; i++) {
+            if (board[i][col] == 1 || 
+                (col - (row - i) >= 0 && board[i][col - (row - i)] == 1) || 
+                (col + (row - i) < N && board[i][col + (row - i)] == 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    bool solveNQueens(int board[][10], int row, int N) {
+        if (row == N) {
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    if (board[i][j] == 1) cout << "Q ";
+                    else cout << ". ";
+                }
+                cout << endl;
+            }
+            cout << endl;
+            return true;
+        }
+    
+        bool res = false;
+        for (int col = 0; col < N; col++) {
+            if (isSafe(board, row, col, N)) {
+                board[row][col] = 1;
+                res = solveNQueens(board, row + 1, N) || res;
+                board[row][col] = 0;
+            }
+        }
+        return res;
+    }
+    </code>
+    
+
+                    </pre>
+                </article>
+            </section>
+            <section id="recursion">
+                <h2>2. Space and Time Efficiency</h2>
+                <p><strong>Space Efficiency:</strong> This refers to the amount of memory an algorithm requires to execute.
+                    Space Efficiency is defined as the process of determining a formula for prediction of how much memory space will be required for the successful execution of the algorithm 
+                    and the memory space is generally considered as primary memory..</p>
+            <p><strong>Example:</strong> Recursive algorithms like Fibonacci require more stack memory due to repeated calls.</p>
+            <p><strong>Time Efficiency:</strong> The time an algorithm takes to run, measured in terms of input size.
+                Faster algorithms can significantly improve the responsiveness of applications and systems. It's particularly important for real-time systems and applications that process large amounts of data.</p>
+            <h3>Orders of Growth</h3>
+            <ul>
+                <li>Constant: <code>O(1)</code> — Accessing an element in an array.</li>
+                <li>Logarithmic: <code>O(log n)</code> — Binary Search in a sorted dataset.</li>
+                <li>Linear: <code>O(n)</code> — Scanning a list for a value.</li>
+                <li>Quadratic: <code>O(n²)</code> — Comparing all pairs.</li>
+                <li>Exponential: <code>O(2ⁿ)</code> — Tower of Hanoi.</li>
+            </ul>
+            
+
+            </section>
+            <section id="backtracking">
+
+                <h2>3. Takeaways from Design Principles</h2>
+                <article>
+                    <h3>Divide and Conquer</h3>
+                    <pre>
+    <code>
+    void MergeSort(int A[], int n) {
+        // Dividing array into smaller subarrays and merging them back
+    }
+    </code>
+                    </pre>
+                </article>
+                <article>
+                    <h3>Dynamic Programming</h3>
+                    <p>Stores results of subproblems, avoiding redundant computation.</p>
+                    <pre>
+    <code>
+    // Knapsack problem example
+    </code>
+                    </pre>
+                </article>
+                <article>
+                    <h3>Algorithms</h3>
+                    <pre>
+    <code>
+    int Find(int parent[], int i) {
+        if (parent[i] != i)
+            parent[i] = Find(parent, parent[i]);
+        return parent[i];
+    }
+    
+    void Union(int parent[], int rank[], int x, int y) {
+        int xroot = Find(parent, x);
+        int yroot = Find(parent, y);
+    
+        if (rank[xroot] < rank[yroot])
+            parent[xroot] = yroot;
+        else if (rank[xroot] > rank[yroot])
+            parent[yroot] = xroot;
+        else {
+            parent[yroot] = xroot;
+            rank[xroot]++;
+        }
+    }
+    
+    void KruskalMST(Edge edges[], int E, int V) {
+        int weights[E], idx[E];
+        for (int i = 0; i < E; i++) {
+            weights[i] = edges[i].weight;
+            idx[i] = i;
+        }
+    
+        MergeSort(weights, idx, 0, E - 1);
+    
+        int parent[V], rank[V];
+        for (int i = 0; i < V; i++) {
+            parent[i] = i;
+            rank[i] = 0;
+        }
+    
+        Edge mst[V - 1];
+        int mstSize = 0;
+    
+        for (int i = 0; i < E && mstSize < V - 1; i++) {
+            Edge edge = edges[idx[i]];
+            int x = Find(parent, edge.src);
+            int y = Find(parent, edge.dest);
+    
+            if (x != y) {
+                mst[mstSize++] = edge;
+                Union(parent, rank, x, y);
+            }
+        }
+    
+        cout << "Edges in the Minimum Spanning Tree:\n";
+        int cost = 0;
+        for (int i = 0; i < mstSize; i++) {
+            cout << mst[i].src << " -- " << mst[i].dest << " == " << mst[i].weight << endl;
+            cost += mst[i].weight;
+        }
+        cout << "Cost = " << cost << endl;
+    }
+    </code>
+                    </pre>
+                </article>
+                
+            </section>
+            <section id="space-efficiency">
+
+                <h2>4. Hierarchical Data and Tree Structures</h2>
+                <h1>Hierarchical Data</h1>
+                <p>Hierarchical data is organized in a parent-child relationship, forming a tree-like structure. Common examples include organizational hierarchies, file systems, XML/JSON data, and dependency graphs. Efficient storage, search, and manipulation of this data require specific tree data structures.</p>
+            
+                <h2>◾General Tree</h2>
+                <p><strong>Definition:</strong> A general tree is a hierarchical data structure in which each node can have zero or more child nodes. Unlike specialized trees, it has no restrictions on the number of children a node can have.</p>
+                <h3>Use Cases:</h3>
+                <ul>
+                    <li><strong>File Systems:</strong> Directory structures in operating systems.</li>
+                    <li><strong>Organizational Charts:</strong> Representing hierarchies in organizations.</li>
+                    <li><strong>XML/HTML Parsing:</strong> Representing document object models.</li>
+                    <li><strong>Game Trees:</strong> Used in AI for representing possible moves in games.</li>
+                </ul>
+                <h3>Optimizations:</h3>
+                <ul>
+                    <li>Representation: Use adjacency lists or parent-child relationships for memory efficiency.</li>
+                    <li>Traversal Algorithms: Optimize depth-first and breadth-first search algorithms to handle specific use cases like searching or updating nodes.</li>
+                    <li>Balanced Structures: Convert to more specialized trees (e.g., B-trees) for certain applications requiring faster access.</li>
+                </ul>
+                <h3>Limitations:</h3>
+                <ul>
+                    <li>Unordered structure may lead to inefficient searches.</li>
+                    <li>Can require significant memory due to the lack of constraints on child nodes.</li>
+                    <li>No inherent balancing mechanism, which can result in deep, unbalanced trees.</li>
+                </ul>
+            
+                <h2>◾Binary Search Tree (BST)</h2>
+                <p><strong>Definition:</strong> A BST is a binary tree where each node has at most two children, and the left child’s value is less than its parent, while the right child’s value is greater than its parent.</p>
+                <h3>Use Cases:</h3>
+                <ul>
+                    <li><strong>Searching:</strong> Efficient lookup operations in databases.</li>
+                    <li><strong>Sorting:</strong> In-order traversal produces sorted data.</li>
+                    <li><strong>Symbol Tables:</strong> Storing key-value pairs.</li>
+                    <li><strong>Range Queries:</strong> Find all elements within a specific range.</li>
+                </ul>
+                <h3>Optimizations:</h3>
+                <ul>
+                    <li>Use self-balancing variants (e.g., AVL trees or Red-Black trees) to maintain logarithmic height.</li>
+                    <li>Implement lazy deletion to defer removal of nodes for better performance in bulk operations.</li>
+                    <li>Use iterative traversal to reduce stack overhead in recursive methods.</li>
+                </ul>
+                <h3>Limitations:</h3>
+                <ul>
+                    <li>Degenerates into a linked list if elements are inserted in sorted order, causing O(n) time for searches.</li>
+                    <li>Lacks inherent balancing, requiring external balancing mechanisms for optimal performance.</li>
+                </ul>
+            
+                <h2>◾ AVL Tree</h2>
+                <p><strong>Definition:</strong> An AVL tree is a self-balancing binary search tree where the height difference (balance factor) between left and right subtrees of any node is at most 1.</p>
+                <h3>Use Cases:</h3>
+                <ul>
+                    <li><strong>Dynamic Sets:</strong> Maintaining sorted data with frequent insertions and deletions.</li>
+                    <li><strong>Databases:</strong> Indexing for efficient range queries.</li>
+                    <li><strong>Real-time Systems:</strong> Applications requiring guaranteed O(log n) operations.</li>
+                </ul>
+                <h3>Optimizations:</h3>
+                <ul>
+                    <li>Rotations (single and double) are used to maintain balance after insertions or deletions.</li>
+                    <li>Tailor balancing operations to specific patterns of usage to reduce overhead.</li>
+                    <li>Use AVL trees only when frequent updates (inserts/deletes) are expected.</li>
+                </ul>
+                <h3>Limitations:</h3>
+                <ul>
+                    <li>Overhead of maintaining balance through rotations can affect performance.</li>
+                    <li>Less space-efficient compared to Red-Black trees due to stricter balancing.</li>
+                </ul>
+            
+                <h2>◾ 2-3 Tree</h2>
+                <p><strong>Definition:</strong> A 2-3 tree is a balanced search tree where each node can have either two children (2-node) or three children (3-node), ensuring all leaf nodes are at the same level.</p>
+                <h3>Use Cases:</h3>
+                <ul>
+                    <li><strong>Database Indexing:</strong> Efficient management of large datasets.</li>
+                    <li><strong>Filesystem Implementations:</strong> Balancing file blocks.</li>
+                    <li><strong>Multi-way Search:</strong> Applications requiring more than two children per node.</li>
+                </ul>
+                <h3>Optimizations:</h3>
+                <ul>
+                    <li>Splitting and merging during insertions and deletions help maintain balance.</li>
+                    <li>Use lazy splitting in bulk insert operations to improve efficiency.</li>
+                </ul>
+                <h3>Limitations:</h3>
+                <ul>
+                    <li>Implementation complexity is higher compared to binary trees.</li>
+                    <li>Space usage can be suboptimal for small datasets.</li>
+                </ul>
+            
+                <h2>◾Red-Black Tree</h2>
+                <p><strong>Definition:</strong> A Red-Black tree is a self-balancing binary search tree with an additional property: each node is either red or black, and the tree satisfies specific balance rules (e.g., no two consecutive red nodes, and the root is always black).</p>
+                <h3>Use Cases:</h3>
+                <ul>
+                    <li><strong>Balanced BST:</strong> Used in STL (e.g., std::map, std::set) for dynamic sets.</li>
+                    <li><strong>Network Routing Tables:</strong> Efficient searching and updating of entries.</li>
+                    <li><strong>Databases:</strong> For indexing and balancing frequent insertions/deletions.</li>
+                </ul>
+                <h3>Optimizations:</h3>
+                <ul>
+                    <li>Fewer rotations compared to AVL trees make it faster for insert-heavy applications.</li>
+                    <li>Incorporate lazy deletion or subtree merging for specific scenarios.</li>
+                </ul>
+                <h3>Limitations:</h3>
+                <ul>
+                    <li>Slightly less balanced than AVL trees, leading to slightly slower lookups.</li>
+                    <li>Implementation is complex due to additional color properties.</li>
+                </ul>
+            
+                <h2>◾Heap</h2>
+                <p><strong>Definition:</strong> A heap is a complete binary tree where the parent node is greater than or equal to its children (max-heap) or less than or equal to its children (min-heap).</p>
+                <h3>Use Cases:</h3>
+                <ul>
+                    <li><strong>Priority Queues:</strong> Efficiently retrieve the maximum or minimum element.</li>
+                    <li><strong>Heap Sort:</strong> Sorting algorithms.</li>
+                    <li><strong>Graph Algorithms:</strong> Used in Dijkstra’s and Prim’s algorithms for priority queues.</li>
+                </ul>
+                <h3>Optimizations:</h3>
+                <ul>
+                    <li>Use array-based representation to save memory and improve locality of reference.</li>
+                    <li>Use Fibonacci heaps for improved amortized time complexity in graph algorithms.</li>
+                    <li>Optimize heapify operations to reduce time complexity for bulk insertions.</li>
+                </ul>
+                <h3>Limitations:</h3>
+                <ul>
+                    <li>Limited to only accessing the root node efficiently.</li>
+                    <li>Inefficient for searching arbitrary elements (O(n)).</li>
+                </ul>
+            
+                <h2>◾Trie (Prefix Tree)</h2>
+                <p><strong>Definition:</strong> A trie is a tree-like data structure that stores strings, where each node represents a character, and paths from the root to a leaf represent strings.</p>
+                <h3>Use Cases:</h3>
+                <ul>
+                    <li><strong>Autocomplete:</strong> Suggesting words or strings based on prefixes.</li>
+                    <li><strong>Spell Checkers:</strong> Efficiently checking word validity.</li>
+                    <li><strong>IP Routing:</strong> Longest prefix match.</li>
+                    <li><strong>Text Compression:</strong> Representing dictionaries for compression algorithms.</li>
+                </ul>
+                <h3>Optimizations:</h3>
+                <ul>
+                    <li>Use compact tries (compressed nodes) to save memory.</li>
+                    <li>Implement lazy deletion and markers for end-of-word to avoid unnecessary nodes.</li>
+                    <li>Combine with hashing for hybrid structures (e.g., ternary search tries).</li>
+                </ul>
+                <h3>Limitations:</h3>
+                <ul>
+                    <li>High memory usage, especially for sparse datasets.</li>
+                    <li>Poor performance for strings with few shared prefixes.</li>
+                    <li>Hard to use for dynamically changing alphabets.</li>
+                </ul>
+                <h3>Briefly</h3>
+                <ul>
+                    <li><strong>Binary Search Tree (BST):</strong> Maintains sorted order for efficient searches.</li>
+                    <li><strong>AVL Tree:</strong> Self-balancing BST that prevents skewness.</li>
+                    <li><strong>Red-Black Tree:</strong> A balanced BST ensuring logarithmic time operations.</li>
+                    <li><strong>Heap:</strong> A complete binary tree used in priority queues.</li>
+                    <li><strong>Trie:</strong> Specialized for prefix-based search.</li>
+                </ul>
+                
+            </section>
+            
+            <section id="time-efficiency">
+                <h2>5. Array Query Algorithms</h2>
+                <p>Array query algorithms are essential tools in computer science that allow for efficient retrieval and manipulation of data stored in arrays. These algorithms are designed to perform operations such as searching, updating, and computing aggregate values over array elements. Their principles and applications highlight their importance in various fields.</p>
+                <p>An array query involves performing specific operations on an array to retrieve or update information based on certain conditions.
+            Common Operations: These include finding the minimum or maximum value, summing elements, checking for the presence of a value, and updating elements at particular indices.
+        </p>
+                <h3>Principles</h3>
+                <ul>
+                    <li>&nbsp;Efficiency: Array query algorithms aim to minimize the time complexity of these operations, ensuring quick and efficient access to data.
+                    </li>
+                    <li>Optimization: Techniques such as pre-processing, divide-and-conquer, and dynamic programming are often used to optimize the performance of these algorithms.</li>
+                </ul>
+                <h3>Implications
+            </h3>
+                <ul>
+                    <li>Performance: Efficient array query algorithms can significantly improve the performance of applications, especially those that handle large datasets. Reducing the time complexity of common operations allows for faster data retrieval and processing.</li>
+                    <li>&nbsp;Scalability: As datasets grow, scalable array query algorithms ensure that performance remains manageable. This is crucial in big data applications and real-time systems where quick access to data is essential.
+                    </li>
+                    <li>Resource Management: Optimized algorithms help manage computational resources effectively, reducing memory usage and computational overhead.
+                    </li>
+                </ul>
+                    
+                </section>
+
+                <section id="design-principles">
+                <h2>6. Trees vs Graphs</h2>
+                <h1>Difference Between Trees and Graphs</h1>
+
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Tree</th>
+                            <th>Graph</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Definition</td>
+                            <td>A hierarchical data structure with nodes connected by edges, forming a single connected component with no cycles.</td>
+                            <td>A data structure consisting of nodes (vertices) connected by edges, which can form cycles and multiple components.</td>
+                        </tr>
+                        <tr>
+                            <td>Connectivity</td>
+                            <td>Always connected.</td>
+                            <td>Can be connected or disconnected.</td>
+                        </tr>
+                        <tr>
+                            <td>Cycles</td>
+                            <td>Does not contain cycles.</td>
+                            <td>Can contain cycles.</td>
+                        </tr>
+                        <tr>
+                            <td>Edges</td>
+                            <td>n-1 edges for n nodes.</td>
+                            <td>Number of edges can vary; no specific relationship to the number of nodes.</td>
+                        </tr>
+                        <tr>
+                            <td>Directionality</td>
+                            <td>Typically, edges are directed (e.g., parent to child).</td>
+                            <td>Edges can be directed or undirected.</td>
+                        </tr>
+                        <tr>
+                            <td>Traversal</td>
+                            <td>Depth-First Search (DFS) and Breadth-First Search (BFS), and tree-specific traversals like Preorder, Inorder, and Postorder.</td>
+                            <td>DFS and BFS are used; graph-specific algorithms like Dijkstra’s or Prim’s are common.</td>
+                        </tr>
+                        <tr>
+                            <td>Applications</td>
+                            <td>Represents hierarchical relationships (e.g., file systems, organizational charts).</td>
+                            <td>Represents networks (e.g., social networks, road maps, and communication networks).</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h2>Tree Traversals</h2>
+                <h3>Depth-First Traversals</h3>
+                <ul>
+                    <li><strong>Preorder Traversal:</strong>
+                        <ul>
+                            <li>Visit the current node first, then recursively traverse the left and right subtrees.</li>
+                            <li>Order: Root → Left → Right.</li>
+                            <li>Use Cases: Copying a tree, prefix expression evaluation.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Inorder Traversal:</strong>
+                        <ul>
+                            <li>Recursively traverse the left subtree, visit the node, then traverse the right subtree.</li>
+                            <li>Order: Left → Root → Right.</li>
+                            <li>Use Cases: Binary search trees (BSTs) to retrieve sorted data.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Postorder Traversal:</strong>
+                        <ul>
+                            <li>Recursively traverse the left and right subtrees, then visit the node.</li>
+                            <li>Order: Left → Right → Root.</li>
+                            <li>Use Cases: Deleting a tree, postfix expression evaluation.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>Breadth-First Traversal</h3>
+                <ul>
+                    <li>Level-order traversal visits all nodes at each level before moving to the next level.</li>
+                    <li>Order: Top to bottom, left to right.</li>
+                    <li>Use Cases: Shortest path problems, finding the level of nodes.</li>
+                </ul>
+                
+                <h2>Graph Traversals</h2>
+                <h3>Depth-First Search (DFS)</h3>
+                <ul>
+                    <li>Explores as far as possible along a branch before backtracking.</li>
+                    <li>Use Cases:
+                        <ul>
+                            <li>Detecting cycles.</li>
+                            <li>Topological sorting.</li>
+                            <li>Solving maze problems.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>Breadth-First Search (BFS)</h3>
+                <ul>
+                    <li>Explores all neighbors of a vertex before moving to the next level.</li>
+                    <li>Use Cases:
+                        <ul>
+                            <li>Shortest path in unweighted graphs.</li>
+                            <li>Connected component analysis.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h2>Applications of Trees</h2>
+                <ul>
+                    <li><strong>Binary Search Tree (BST):</strong> Dynamic set operations like insertion, deletion, and searching in O(log n) (on average).</li>
+                    <li><strong>Heap:</strong> Efficient priority queue implementation. Sorting algorithms (Heap Sort).</li>
+                    <li><strong>Trie:</strong> Fast string searching. Autocomplete features.</li>
+                </ul>
+                
+                <h2>Applications of Graphs</h2>
+                <ul>
+                    <li><strong>Social Networks:</strong> Analyzing user connections, finding influencers, or recommendations.</li>
+                    <li><strong>Transportation and Routing:</strong> Shortest path algorithms (e.g., Dijkstra’s) for navigation systems.</li>
+                    <li><strong>Communication Networks:</strong> Optimizing network traffic, fault detection.</li>
+                    <li><strong>Dependency Resolution:</strong> Topological sorting in build systems.</li>
+                </ul>
+                
+            </section>
+
+            <section id="tree-data-structures">
+                <h2>7. Sorting and Searching Algorithms</h2>
+                <p><strong>Sorting Techniques:</strong> Bubble Sort (O(n²)), MergeSort (O(n log n)), QuickSort (average O(n log n)).</p>
+            <pre>
+<code>
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {
+        for (int j = 0; j < n-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                swap(arr[j], arr[j+1]);
+            }
+        }
+    }
+}
+</code>
+                </pre>
+            <p><strong>Searching Techniques:</strong> Linear Search (O(n)), Binary Search (O(log n)).</p>
+            
+    
+        </section>
+
+            <section id="array-query-algorithms">
+                <h2>8. Graph Algorithms</h2>
+                <p><strong>Spanning Trees:</strong> Minimal cost connectivity (e.g., Prim’s, Kruskal’s).</p>
+                <h3>Spanning Trees</h3>
+                <h4>Kruskal's Algorithm:</h4>
+                <ul>
+                    <li>
+                    <p><span>Concept<strong>:</strong> Kruskal's algorithm is used to find 
+                    the Minimum Spanning Tree (MST) of a graph. It sorts all the edges in 
+                    the graph by their weight and then adds the shortest edge to the MST, 
+                    ensuring no cycles are formed until all vertices are included.</span></p>
+                    </li>
+                    <li>
+                    <p><span>Importance<strong>:</strong> It is efficient for sparse graphs 
+                    and helps in network design, such as minimizing the cost of laying out 
+                    electrical wiring or network cables.</span></p>
+                    </li>
+                </ul>
+                <h4>Prim's Algorithm:</h4>
+                <ul>
+                    <li>
+                    <p><span>Concept<strong>:</strong> Prim's algorithm also finds the MST 
+                    by starting with a single vertex and repeatedly adding the smallest edge 
+                    that connects the tree to a vertex not yet in the tree.</span></p>
+                    </li>
+                    <li>
+                    <p><span>Importance: Suitable for dense graphs, it is 
+                    useful in constructing road networks or optimizing the layout of utility 
+                    networks.</span></p>
+                    </li>
+                </ul>
+                
+                <h3>Shortest Path</h3>
+                <h4>Dijkstra's Algorithm:</h4>
+                <ul>
+                    <li>
+                    <p><span>Concept:Dijkstra's algorithm finds the 
+                    shortest path from a source vertex to all other vertices in a weighted 
+                    graph. It continuously selects the vertex with the minimum distance, 
+                    updates the distances to its neighbors, and marks it as visited.</span></p>
+                    </li>
+                    <li>
+                    <p><span>Importance:Widely used in GPS navigation 
+                    systems, network routing protocols, and mapping software to determine 
+                    the shortest routes.</span></p>
+                    </li>
+                </ul>
+                <h4>Bellman-Ford Algorithm:</h4>
+                <ul>
+                    <li>
+                    <p><span>Concept: The Bellman-Ford algorithm computes 
+                    the shortest paths from a single source vertex to all other vertices, 
+                    even if the graph has negative weight edges. It iterates through all 
+                    edges and updates the path lengths.</span></p>
+                    </li>
+                    <li>
+                    <p><span>Importance: Useful in scenarios where graphs 
+                    may have negative weights, such as in financial models and varying cost 
+                    networks.</span></p>
+                    </li>
+                </ul>
+                <h4>Floyd-Warshall Algorithm:</h4>
+                <ul>
+                    <li>
+                    <p><span>Concept: The Floyd-Warshall algorithm finds 
+                    shortest paths between all pairs of vertices in a weighted graph. It 
+                    uses dynamic programming to update the shortest paths iteratively.</span></p>
+                    </li>
+                    <li>
+                    <p><span>Importance:Effective for dense graphs, it is 
+                    used in applications like network routing, urban traffic planning, and 
+                    social network analysis.</span></p>
+                    </li>
+                </ul>
+<h4>Example Dijkstra Code</h4>
+<pre>
+<code>
+class Dijkstra {
+public:
+    int dist[100];
+    int path[100];
+    int visited[100] = {0};
+    int v;
+    int src;
+
+    void initialize(int cost[50][50]);
+    void read(int cost[50][50]);
+};
+
+void Dijkstra::initialize(int cost[50][50]) {
+    for (int i = 0; i < v; i++) {
+        path[i] = src;
+        dist[i] = cost[src][i];
+        visited[i] = 0;
+    }
+    visited[src] = 1;
+}
+</code>
+            </pre>
+            
+
+            </section>
+            <section id="graph-algorithms">
+                <h2>9. Algorithm Design Techniques</h2>
+                <h3>Techniques</h3>
+                <h4>Brute Force</h4>
+                <p class="auto-style1">Brute force is a straight forward approach to solving a problem, 
+                usually, directly based on the problem statement and definitions of the 
+                concepts involved. </p>
+                <p class="auto-style1">Basically it’s an exhaustive algorithm. Example: a brute force 
+                algorithm to find the divisors of a natural number ‘n’ would enumerate all 
+                integers from 1 to n and check whether each of them divides n without 
+                reminders.</p>
+                <p class="auto-style1">Examples: </p>
+                 <ul class="auto-style2">
+                     <li>Selection Sort</li>
+                     <li>Bubble Sort
+                 </li>
+                     <li>Sequential Search</li>
+                     <li>Brute Force String Match <br></li>
+                </ul>
+                
+                
+                
+                    <h4>Decrease and Conquer</h4>
+               
+                <p class="auto-style1">It is based on exploiting the relationship between a solution to a 
+                given instance of a problem and solution to a smaller instance of the same 
+                problem. </p>
+                <p class="auto-style1">Once the relation is established, it can be either exploited by 
+                top-down approach using recursion or bottom-up approach without recursion.</p>
+                <p class="auto-style2">&nbsp;The technique has variations: </p>
+                <ul class="auto-style2">
+                    <li>Decrease by a constant </li>
+                    <li>Decrease by a constant factor</li>
+                    <li>Variable size decrease </li>
+                </ul>
+                <p class="auto-style1">Examples: </p>
+                 <ul class="auto-style2">
+                     <li>Insertion Sort</li>
+                     <li>Depth First Search</li>
+                     <li>Breadth First Search</li>
+                </ul>
+                
+                        <h4>Divide and Conquer</h4>
+                
+                <p class="auto-style1">The technique is based on based on multi-branched 
+                recursion. A divide and conquer algorithm works by recursively breaking 
+                down a problem into two or more sub-problems of the same or related type, 
+                until these become simple enough to be solved directly. The solutions to 
+                the sub-problems are then combined to give a solution to the original 
+                problem. </p>
+                <p class="auto-style1">Examples: </p>
+                 <ul class="auto-style2">
+                     <li>Merge Sort</li>
+                     <li>Quick Sort
+                 </li>
+                     <li>Binary Search</li>
+                </ul>
+                
+               
+                        <h4>Transform and Conquer</h4>
+                
+                <p class="auto-style1">A problem instance is transformed to one of the 
+                below before the solution is obtained. </p>
+                <ul>
+                    <li class="auto-style1">
+                    Instance simplification: transform to a simpler or more convenient 
+                    instance of the same problem.<li class="auto-style1">
+                    Representation change: transform to a different representation of the 
+                    same instance.<li class="auto-style1">
+                    Problem reduction: transform to an instance of 
+                    a different problem for which an algorithm is already available.</ul>
+                <p class="auto-style1">Examples: </p>
+                 <ul class="auto-style2">
+                     <li>AVL Trees&nbsp;&nbsp; </li>
+                     <li>2-3 Trees</li>
+                     <li>Heap Sort</li>
+                </ul>
+          
+                        <h4>Dynamic Programming</h4>
+                
+                <p class="auto-style1">&nbsp;Dynamic programming is a method for solving a 
+                complex problem by breaking it down into a collection of simpler 
+                sub-problems, solving each of those sub-problems just once, and storing 
+                their solutions. The next time the same sub-problem occurs, instead of 
+                recomputing its solution, one simply looks up the previously computed 
+                solution, thereby saving computation time at the expense of a modest 
+                expenditure in storage space. </p>
+                <p class="auto-style1">The technique of storing solutions to subproblems 
+                instead of recomputing them is called "memoization". Dynamic programming 
+                algorithms are often used for optimization. A dynamic programming 
+                algorithm will examine the previously solved subproblems and will combine 
+                their solutions to give the best solution for the given problem.</p>
+                <p class="auto-style1">Examples: </p>
+                 <ul class="auto-style2">
+                     <li>Warshall's Algorithm</li>
+                     <li>Floyd's Algorithm</li>
+                     <li>Bellman-Ford Algorithm</li>
+                </ul>
+          
+                        <h4>Greedy Technique</h4>
+                
+                <p class="MsoNormal">A greedy algorithm is an algorithmic paradigm that 
+                follows the problem solving heuristic of making the locally optimal choice 
+                at each stage with the hope of finding a global optimum.<o:p></o:p></p>
+                <p class="MsoNormal">In general, greedy algorithms have five components:<o:p></o:p></p>
+                <ul>
+                    <li class="auto-style1">
+                    A candidate set, from which a solution is created<o:p>.</o:p><li class="auto-style1">
+                    <o:p>A selection function,<span>which chooses the best candidate to be 
+                    added to the solution.</span></o:p><li class="auto-style1">
+                    <p class="MsoNormal">A feasibility function, that is used to determine 
+                    if a candidate can be used to<o:p> contribute to a solution.</o:p></p>
+                    <li class="auto-style1">
+                    <p class="MsoNormal">An objective function, which assigns a value to a 
+                    solution, or a partial solution, and</p>
+                    <li class="auto-style1">
+                    <p class="MsoNormal">A solution function, which will indicate when we 
+                    have discovered a complete<o:p> solution</o:p></p>
+                    <o:p></o:p>
+                </ul>
+                <p class="auto-style1">Examples: </p>
+                 <ul class="auto-style2">
+                     <li>Prim's Algorithm</li>
+                     <li>Kruskal's Algorithm</li>
+                     <li>Dijkstra's Algorithm</li>
+                </ul>
+                <h4>Space and Time trade-off</h4>
+                <p class="MsoNormal">A space–time or time–memory trade-off is a case where 
+                an algorithm or program trades increased space usage with decreased time.
+                </p>
+                <p class="MsoNormal">Here, space refers to the data storage consumed in 
+                performing a given task (RAM, HDD, etc), and time refers to the time 
+                consumed in performing a given task (computation time or response time).
+                </p>
+                <p class="MsoNormal">The most common situation is an algorithm involving a 
+                lookup table: an implementation can include the entire table, which 
+                reduces computing time, but increases the amount of memory needed, or it 
+                can compute table entries as needed, increasing computing time,but 
+                reducing memory requirements.<o:p></o:p></p>
+                <p class="auto-style1">Examples: </p>
+                 <ul class="auto-style2">
+                     <li>Hashing</li>
+                     <li>&nbsp;Boyer-Moore Algorithm</li>
+                </ul>
+                
+                <h4>Randomized Algorithms</h4>
+                <p class="MsoNormal">A randomized algorithm is an algorithm that employs a 
+                degree of randomness as part of<o:p></o:p></p>
+                <p class="MsoNormal">its logic. The algorithm typically uses uniformly 
+                random bits as an auxiliary input to guide<o:p></o:p></p>
+                <p class="MsoNormal">its behaviour, in the hope of achieving good 
+                performance in the average case over all<o:p></o:p></p>
+                <p class="MsoNormal">possible choices of random bits. </p>
+                <p class="MsoNormal">Formally, the algorithm's performance will be a 
+                random variable determined by the random bits; thus either the running 
+                time, or the output (or both) are random variables.<o:p></o:p></p>
+                <p class="auto-style1">Examples: </p>
+                 <ul class="auto-style2">
+                     <li>Skip List</li>
+                     <li>Random Binary Trees</li>
+                </ul>
+                
+                <h4>Backtracking</h4>
+                <p class="MsoNormal">Backtracking is a general algorithm for finding all 
+                (or some) solutions to some computational problem, that incrementally 
+                builds candidates to the solutions, and abandons each partial candidate 
+                ("backtracks") as soon as it determines that candidate cannot possibly be 
+                completed to a valid solution.<o:p></o:p></p>
+                <p class="MsoNormal">Backtracking is an important tool for solving 
+                constraint satisfaction problems, such as crosswords, verbal arithmetic, 
+                Sudoku, and many other puzzles.<o:p></o:p></p>
+                <p class="auto-style1">Examples: </p>
+                 <ul class="auto-style2">
+                    <li><strong>Divide and Conquer:</strong> Solves problems by breaking them into smaller parts (e.g., MergeSort).</li>
+                    <li><strong>Dynamic Programming:</strong> Solves overlapping subproblems (e.g., Longest Common Subsequence).</li>
+                    <li><strong>Greedy:</strong> Approximates solutions efficiently (e.g., Huffman Coding).</li>
+                    <li><strong>Backtracking:</strong> Explores all configurations, eliminating invalid ones (e.g., N-Queens).</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+// Toggle sidebar and content position
+document.getElementById('toggle-button').addEventListener('click', function () {
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const toggleButton = document.getElementById('toggle-button');
+
+    // Toggle sidebar visibility
+    sidebar.classList.toggle('active');
+
+    // Shift content to the right when sidebar is visible
+    content.classList.toggle('shifted');
+
+    // Move the toggle button along with the sidebar
+    if (sidebar.classList.contains('active')) {
+        toggleButton.style.left = '250px';  // Align it with the sidebar
+    } else {
+        toggleButton.style.left = '20px';   // Reset to original position
+    }
+});
+
+// Smooth scrolling for sidebar links and hiding the sidebar
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').slice(1); // Remove the '#' to get the ID
+        const targetElement = document.getElementById(targetId);
+
+        // Scroll to the target section smoothly
+        targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+
+        // Hide the sidebar and reset the toggle button position
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+        sidebar.classList.remove('active');
+        content.classList.remove('shifted');
+
+        // Optionally reset the toggle button position when hiding the sidebar
+        const toggleButton = document.getElementById('toggle-button');
+        toggleButton.style.left = '20px'; // Hide button back to the left side
+    });
+});
+
+    </script>
+</body>
+</html>

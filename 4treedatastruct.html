@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tree</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Bootstrap CSS File -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS File -->
+  <link href="styles.css" rel="stylesheet">
+  <link href="algorithmcss.css" rel="stylesheet" type="text/css">
+  </head>
+
+<body>
+  <!-- Header Section -->
+  <header id="header" class=" text-white text-center py-3">
+    <div class="container">
+      <h1>&nbsp;</h1>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="container mt-4">
+    <!-- Introduction Section -->
+    <section id="intro" class="mb-5">
+      <h2 class="text-center"><span>Tree Data Structures and 
+	  Hierarchies</span></h2>
+      <p>Tree data structures are fundamental in computer science for managing 
+	  hierarchical data efficiently. They offer various ways to organize and 
+	  access data, ensuring quick search, insertion, and deletion operations. 
+	  Common types of tree data structures include Binary Search Trees (BST), 
+	  AVL trees, Red-Black trees, 2-3 trees, heaps, and tries. Each type has 
+	  unique properties that make it suitable for specific scenarios, such as 
+	  maintaining balance, optimizing search times, or handling prefix-based 
+	  searches. Collectively, these structures are essential for tasks like 
+	  database indexing, priority queues, autocomplete systems, and more, 
+	  providing the backbone for efficient algorithm design and data management 
+	  in numerous applications</p>
+	  <p>Hierarchical data structures are pivotal in organizing and managing data that naturally forms a hierarchy, such as file systems, organizational charts, and classification systems. Trees are a classic example of hierarchical data structures, and different types of trees are designed to solve and optimize specific problem scenarios.<br><span> 
+		      <a href="graph algorithms.html" class="btn btn-primary mt-3" style="width: 159px">BST traversal</a> 
+		      <a href="graph algorithms.html" class="btn btn-primary mt-3" style="width: 159px">Heap</a></span></p>
+		      &nbsp;&nbsp;
+   </section>
+    
+    <!-- Iteration,Recursion,Backtracking Section -->
+    <section class="mb-5">
+      <h3 class="text-left">General Tree</h3>
+        <p class="MsoNormal"><span>A tree is a collection of nodes connected by 
+		edges, with one node designated as the root. Each node can have zero or 
+		more child nodes, and there is no limit to the number of children a node 
+		can have.</span></p>
+		<p class="MsoNormal">It is used to represent hierarchical data like file 
+		systems,organizational structures.</p>
+		<p class="MsoNormal">It provides a flexible way to model data that 
+		doesn't fit into a strict linear order.</p>
+    </section>
+    <section class="mb-5">
+      <h3 class="text-left">Binary Search Tree</h3>
+        <p class="MsoNormal"><span>A BST is a type of tree where each node has 
+		at most two children, referred to as the left and right child. For any 
+		given node, all values in the left subtree are less than the node's 
+		value, and all values in the right subtree are greater.</span></p>
+		<p class="MsoNormal">It is used for efficiently searching, inserting, and deleting data, such as in databases and 
+		dynamic sets.</p>
+		<p class="MsoNormal">BST is prefered as a better data structure since it<span> 
+		ensures that operations like search, insert, and delete can be performed 
+		in O(log n) time on average, making it suitable for applications 
+		requiring dynamic data management.</span></p>
+    </section>
+     <section class="mb-5">
+      <h3 class="text-left"><span>AVL Tree</span></h3>
+         <p class="MsoNormal"><span>
+		 <o:p>An AVL tree is a self-balancing binary search tree where the 
+		 difference in heights of the left and right subtrees of any node is at 
+		 most one. This balance is maintained through rotations during insertion 
+		 and deletion operations.</o:p></span></p>
+		 <p class="MsoNormal"><span>It is used in situations where balanced tree 
+		 performance is critical, such as in search operations and database 
+		 indexing.</span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;">
+		 AVL trees provide guaranteed O(log n) time complexity for insert, 
+		 delete, and search operations, ensuring consistent performance.</span></p>
+    </section>
+   <section class="mb-5">
+      <h3 class="text-left">2-3<span> TREE</span></h3>
+         <p class="MsoNormal" style="mso-add-space: auto;">
+		 <span>&nbsp;&nbsp;&nbsp; </span>A 2-3 tree is a type of balanced search 
+		 tree where every node has either two or three children. It maintains 
+		 balance by ensuring that all leaf nodes are at the same depth.<o:p></o:p></span></p>
+		 <p class="MsoNormal"><span>It is used for filesystem 
+		 implementation,datatbase indexing and memory management.</span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;">
+		 <span>The strict balancing criteria ensure that the tree remains 
+		 balanced, providing efficient search, insert, and delete operations.</span></p>
+    </section>
+    
+   <section class="mb-5">
+      <h3 class="text-left">Red-Black Tree</h3>
+	   <p class="MsoNormal" style="mso-add-space: auto;"><span lang="EN-IN">A 
+	   red-black tree is a self-balancing binary search tree where each node 
+	   contains an extra bit for denoting the color (red or black). The tree 
+	   ensures that no two consecutive red nodes appear on any path from the 
+	   root to the leaves, and the number of black nodes is consistent on every 
+	   path.<o:p></o:p></span></p>
+		 <p class="MsoNormal"><span>Used in the implementation of associative 
+		 arrays, priority queues, and sets/maps in many programming languages.</span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;">
+		 <span>Red-black trees offer good balance with less strict balancing 
+		 criteria compared to AVL trees, leading to simpler implementation while 
+		 still ensuring O(log n) performance for basic operations.</span></p>
+    </section>
+
+   <section class="mb-5">
+      <h3 class="text-left">Heap</h3>
+	   <p class="MsoNormal" style="mso-add-space: auto;"><span lang="EN-IN">
+	   <o:p><span>A heap is a binary tree-based data structure that satisfies 
+	   the heap property, where the key at the root must be either the largest 
+	   or the smallest among all keys present in the tree (max-heap or 
+	   min-heap).</span></o:p></span></p>
+		 <p class="MsoNormal"><span>Used in the implementation of </span>
+		 <span lang="EN-IN">Priority queues, scheduling algorithms, and graph 
+		 algorithms.<o:p></o:p></span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;">
+		 <span lang="EN-IN">Heaps provide efficient access to the largest or 
+		 smallest element, making them ideal for priority queue implementations 
+		 and algorithms that need frequent access to extreme values.<o:p></o:p></span></p>
+    </section>
+<section class="mb-5">
+      <h3 class="text-left">Trie</h3>
+	   <p class="MsoNormal" style="mso-add-space: auto;"><span lang="EN-IN">A 
+	   trie (or prefix tree) is a tree-like data structure that stores a dynamic 
+	   set of strings, where the keys are usually strings. Each node represents 
+	   a common prefix of the stored strings.</span></p>
+		 <p class="MsoNormal"><span>Used in the implementation of Autocomplete 
+		 systems, spell checkers, and IP routing.</span></p>
+		 <p class="MsoNormal" style="mso-add-space: auto;">
+		 <span lang="EN-IN">Tries offer efficient string search operations, 
+		 allowing for quick lookups, insertions, and deletions, making them 
+		 suitable for applications that involve large sets of strings.<o:p></o:p></span></p>
+    </section>
+
+  </main>
+  
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white text-center py-3">
+  </footer>
+
+  <!-- Bootstrap JS File -->
+  <script src="jquery-3.5.1.slim.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+</body>
+</html>

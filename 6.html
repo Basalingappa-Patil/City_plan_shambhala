@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tree and Graph traversal</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Bootstrap CSS File -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS File -->
+  <link href="styles.css" rel="stylesheet">
+  </head>
+
+<body>
+  <!-- Header Section -->
+  <header id="header" class="bg-primary text-white text-center py-3">
+    <div class="container">
+      <h1>Tree and Graph traversal</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mt-4">
+    <!-- Introduction Section -->
+    <section id="intro" class="mb-5">
+    <h2 class="text-center">
+	Tree and graph traversal are fundamental techniques in computer science for systematically visiting all the nodes in a tree or graph structure. They are used in various applications like search algorithms, network routing, and data structure operations.
+    .</h2>
+        <p class="MsoNormal"In the realm of computer science, the efficiency of an algorithm is a paramount concern. This efficiency is primarily measured by two key factors: space efficiency and time efficiency.r 
+		lives easier.</p>
+		<p class="MsoNormal">&nbsp;</p>
+		<p class="MsoNormal"><o:p></o:p></p>
+		<o:p>
+		<pre></pre>
+		
+
+      <p>&nbsp;</p>
+    </section>
+    <!-- Differentiation Section -->
+</section>
+  </main>
+
+  
+  <!-- Bootstrap JS File -->
+  <script src="jquery-3.5.1.slim.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <ol start="1">
+	><h3><strong><span>Trees</strong></h3
+	  <li>
+        <p><span><strong>:</strong>  It is a non linear collection of data item called node where each nodes connected by edges.</span></p>
+	  <p class="MsoNormal"><span><strong>Definition: A connected, acyclic graph with n nodes and n−1n-1n−1 edges.</strong></span></p>
+      <p><span><strong>hierarchachy:</strong> Represents hierarchical data with a parent-child relationship..</span></p>
+      <p><span><strong>Edges:</strong> Exactly n−1 edges for n nodes..</span></p>
+      <p><span><strong>Direction:</strong> Typically directed (parent-to-child)..</span></p>
+      <p><span><strong>Cyclic nature:</strong> Acyclic (no cycles)...</span></p>
+      <p><span><strong>root:</strong> Has a single root node....</span></p>
+      <p><span><strong>Connectivity:</strong> Always connected...</span></p>
+      <p><span><strong>Types:</strong> binary search tree,AVL....</span></p>
+	  <ul>
+		  <li>
+		  <p class="MsNormal"><span><strong></strong> 
+            <h3><strong><span>Trees traversal</strong></h3>
+                <p><span><strong>purpose:</strong> Navigate through hierarchical data.....</span></p>
+                <p><span><strong>structure:</strong> operates on hierarchical,acyclic structures....</span></p>
+                <p><span><strong>Goal:</strong> Visit all nodes while preserving hierarchy....</span></p>
+                <p><span><strong>complexity:</strong> O(n) for n nodes.....</span></p>
+                <p class="MsoNormal"><span><strong>Types</strong></span></p>
+                <p class="MsoNormal"><span><strong>1):Depth for search .</strong></span></p>
+                <p><span><strong>preorder:</strong>  Visit root → Left subtree → Right subtree.</span></p>
+                <p><span><strong>inoreder:</strong>Left subtree → Root → Right subtree (common in binary search trees for sorted order)....</span></p>
+                <p><span><strong>postorder:</strong> Left subtree → Right subtree → Root.....</span></p>
+                <p class="MsoNormal"><span><strong>2):breadth for search .</strong></span></p>
+                <p><span><strong>preorder:</strong>  Visit root → Left subtree → Right subtree.</span></p>
+                <p><span><strong>inoreder:</strong>Left subtree → Root → Right subtree (common in binary search trees for sorted order)....</span></p>
+                <p><span><strong>postorder:</strong> Left subtree → Right subtree → Root.....</span></p>
+
+			
+			</span></p>
+		  </li>
+		  <li>
+		  <p class="MsNormal"><span><strong>:</strong> </span></p>
+		  </li>
+	  </ul>
+	  </li>
+	  <li>
+        <h3><strong><span>graphs</strong></h3>
+            <p><span><strong>definition:</strong> A collection of vertices (nodes) and edges, possibly cyclic, directed, or undirected....</span></p>
+            <p><span><strong>hierarachchy:</strong>Represents networks with arbitrary connections, not necessarily hierarchical.....</span></p>
+            <p><span><strong>edges:</strong> : Can have any number of edges, including cycles and parallel edges.....</span></p>
+            <p><span><strong>Direction:</strong> Can be directed, undirected, or mixed....</span></p>
+            <p><span><strong>Cyclic Nature:</strong> : May contain cycles (cyclic graph) or not (acyclic graph).....</span></p>
+            <p><span><strong>Roots:</strong> No inherent root; connections are arbitrary...</span></p>
+            <p><span><strong>connectivity:</strong> Can be connected or disconnected.....</span></p>
+		<h3><strong><span></strong></h3>
+	  <p><span><strong></strong></span></p>
+	  <ul>
+		  <li>
+            <h3><strong><span>Graph  traversal</strong></h3>
+                <p><span><strong>purpose:</strong> Explore all vertices and edges in arbitrary structures....</span></p>
+                <p class="MsoNormal"><span><strong>Types</strong></span></p>
+                <p class="MsoNormal"><span><strong>1):Depth for search .</strong></span></p>
+                <p><span><strong>preorder:</strong>  Visit root → Left subtree → Right subtree.</span></p>
+                <p><span><strong>inoreder:</strong>Left subtree → Root → Right subtree (common in binary search trees for sorted order)....</span></p>
+                <p><span><strong>postorder:</strong> Left subtree → Right subtree → Root.....</span></p>
+                <p class="MsoNormal"><span><strong>2):breadth for search .</strong></span></p>
+                <p><span><strong>preorder:</strong>  Visit root → Left subtree → Right subtree.</span></p>
+                <p><span><strong>inoreder:</strong>Left subtree → Root → Right subtree (common in binary search trees for sorted order)....</span></p>
+                <p><span><strong>postorder:</strong> Left subtree → Right subtree → Root.....</span></p>
+                <p class="MsoNormal"><span><strong>3):topological sort .</strong></span></p>
+		  <p><span><strong>:</strong>.</span></p>
+		  </li>
+		  <li>
+		  <p><span><strong>:</strong> .</span></p>
+		  </li>
+	  </ul>
+	  </li>
+	  <li>
+		<h3><strong><span></strong></h3>
+	  <p><span><strong>:</strong></span></p>
+	  <ul>
+		  <li>
+		  <p><span><strong></strong>  
+		  </li>
+		  <li>
+			<p><span><strong>:</strong>
+		  <p><span><strong>:</strong> 
+		   </span></span></p>
+		  </li>
+	  </ul>
+	  </li>
+  </ol>
+</body>
+
+</html>
