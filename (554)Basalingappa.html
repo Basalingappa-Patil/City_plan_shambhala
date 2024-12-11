@@ -92,25 +92,68 @@ body {
             margin-left: 250px; /* Shift the content right */
         }
     /* Responsive adjustments */
+/* For devices with a max-width of 768px (tablets in portrait and smaller devices) */
 @media (max-width: 768px) {
-    .toggle-button {
-        width: 35px;
-        height: 35px;
-        font-size: 1.25rem;
-    }
-
     .sidebar {
-        width: 200px; /* Smaller sidebar for smaller screens */
+        width: 200px; /* Reduce sidebar width for smaller screens */
     }
 
     .sidebar.active + .toggle-button {
         left: 200px; /* Adjust toggle button position */
     }
 
-    .content.shifted {
-        margin-left: 200px; /* Adjust content margin for smaller sidebar */
-        width: calc(100% - 200px); /* Adjust content width */
+    .content {
+        padding: 1rem; /* Adjust content padding for smaller screens */
     }
+
+    .content.shifted {
+        margin-left: 200px; /* Adjust margin for shifted content */
+        width: calc(100% - 200px); /* Ensure the content fits perfectly */
+    }
+
+    .toggle-button {
+        width: 35px; /* Smaller square for the toggle button */
+        height: 35px;
+        font-size: 1.25rem;
+    }
+}
+
+/* For devices with a max-width of 480px (mobile phones) */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 180px; /* Further reduce sidebar width */
+    }
+
+    .sidebar.active + .toggle-button {
+        left: 180px; /* Adjust toggle button position */
+    }
+
+    .content {
+        padding: 0.5rem; /* Smaller padding for content */
+    }
+
+    .content.shifted {
+        margin-left: 180px; /* Adjust margin for shifted content */
+        width: calc(100% - 180px); /* Adjust content width for small sidebar */
+    }
+
+    .toggle-button {
+        width: 30px; /* Even smaller square for toggle button */
+        height: 30px;
+        font-size: 1rem; /* Reduce icon size */
+    }
+
+    header {
+        font-size: 1rem; /* Adjust header font size for readability */
+        padding: 0.75rem;
+    }
+
+    section {
+        padding: 1rem; /* Reduce section padding */
+        margin: 0.5rem 0; /* Reduce spacing between sections */
+    }
+}
+
 }
     </style>
 </head>
