@@ -6,7 +6,7 @@
     <title>Unified Sidebar Navigation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-body {
+        body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -15,32 +15,32 @@ body {
 }
 
         .sidebar {
-            width: 250px;
-            background-color: rgba(71, 59, 59, 0.8); /* Dark transparent background */
-            color: white;
-            padding: 15px;
-            position: fixed;
-            left: -250px; /* Initially hidden */
-            height: 100%;
-            overflow-y: auto;
-            transition: left 0.3s ease; /* Smooth transition */
-            z-index: 1000; /* Ensure it is above other content */
-        }
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    color: white;
+    padding: 15px;
+    position: fixed;
+    left: -250px; /* Initially hidden */
+    height: 100%;
+    overflow-y: auto;
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it is above other content */
+}
 
-        .sidebar h2 {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
+.sidebar h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
 
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem;
+    margin: 0.4rem 0;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
 
         .sidebar a:hover {
             background-color: #495057;
@@ -91,7 +91,8 @@ body {
         .content.shifted {
             margin-left: 250px; /* Shift the content right */
         }
-    /* Responsive adjustments */
+
+
 /* For devices with a max-width of 768px (tablets in portrait and smaller devices) */
 @media (max-width: 768px) {
     .sidebar {
